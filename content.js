@@ -35,7 +35,7 @@ window.SITE = {
 
   /* ---------- CONTACT & LINKS ---------- */
 
-  email:    "hello@example.com",
+  email:    "Gbolahant@gmail.com",
   linkedin: "https://www.linkedin.com/in/gbolahantowobola1",
   github:   "https://github.com/Gbolahant",
   twitter:  "https://twitter.com/gbolahant1",
@@ -46,14 +46,15 @@ window.SITE = {
 
   about: {
     eyebrow: "The short version",
-    lead: "Most of my work lives at the seam between *credit risk* and *data engineering*.",
+    lead: "Most of my work lives at the seam between *credit risk* and *data analytics*.",
     body: "I write the SQL that shapes loan-performance data, model how cohorts repay across their life, test credit-policy changes before they ship, and build the Power BI reporting leadership actually uses to make calls. I care about analytics that ends in a decision — not a slide that gets admired and forgotten.",
     // The little list on the right. label + value pairs.
     aside: [
       { label: "Currently",  value: "Credit & BI Portfolio Manager" },
-      { label: "Focus",      value: "Loan performance, credit policy & experimentation" },
+      { label: "Focus",      value: "Loan performance, credit policy & experimentation, Data Analytics" },
       { label: "Background",  value: "Consumer lending & fintech, Nigeria" },
-      { label: "Also",        value: "Teaching data skills · investing" },
+      { label: "Also",        value: "Teaching data skills · Esport · Power Platform" },
+      { label: "Learning",    value: "Data Science" },
     ],
   },
 
