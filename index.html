@@ -580,10 +580,24 @@
   (function(){
     const S = window.SITE;
     if(!S) return; // if content file is missing, keep the built-in defaults
-    const esch = v => String(v==null?'':v).replace(/[&<>]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+    // count years automatically from career_start (e.g. 2021 or "2021-06")
+    const now = new Date();
+    let YEARS = '';
+    (function(){
+      const s = String(S.career_start==null?'':S.career_start).trim();
+      const d = /^\d{4}$/.test(s) ? new Date(+s,0,1) : new Date(s);
+      if(s && !isNaN(d)){
+        let y = now.getFullYear() - d.getFullYear();
+        const m = now.getMonth() - d.getMonth();
+        if(m < 0 || (m===0 && now.getDate() < d.getDate())) y--;
+        YEARS = y;
+      }
+    })();
+    const subst = v => String(v==null?'':v).replace(/\{years\}/g, YEARS);
+    const esch = v => subst(v).replace(/[&<>]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
     const fmt  = v => esch(v).replace(/\*([^*]+)\*/g, '<b>$1</b>');
     const html = (sel,val)=>{ const el=document.querySelector(sel); if(el&&val!=null&&val!=='') el.innerHTML=fmt(val); };
-    const txt  = (sel,val)=>{ const el=document.querySelector(sel); if(el&&val!=null&&val!=='') el.textContent=val; };
+    const txt  = (sel,val)=>{ const el=document.querySelector(sel); if(el&&val!=null&&val!=='') el.textContent=subst(val); };
     const href = (sel,val)=>{ if(val) document.querySelectorAll(sel).forEach(el=>el.setAttribute('href',val)); };
     const purl = p => p.slug ? ('project.html?p='+encodeURIComponent(p.slug)) : (p.href||'#');
 
