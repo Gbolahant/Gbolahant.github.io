@@ -24,38 +24,45 @@
   img{max-width:100%;display:block}
   ::selection{background:var(--evergreen);color:#fff}
   .wrap{max-width:var(--max);margin:0 auto;padding-left:var(--pad);padding-right:var(--pad)}
-  .mono{font-family:"IBM Plex Mono",monospace}
 
   header.nav{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--paper) 82%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
   .nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px;max-width:var(--max);margin:0 auto;padding-left:var(--pad);padding-right:var(--pad)}
   .brand{display:flex;align-items:center;gap:.65rem;text-decoration:none;font-weight:600}
   .monogram{width:34px;height:34px;border-radius:8px;display:grid;place-items:center;background:var(--ink);color:var(--paper);font-family:"Bricolage Grotesque",serif;font-weight:700;font-size:.95rem}
   .brand-name{font-family:"Bricolage Grotesque",serif;font-size:1rem}
-  .nav-back{text-decoration:none;color:var(--ink-soft);font-size:.9rem;font-weight:500;display:inline-flex;align-items:center;gap:.4rem}
+  .nav-back{text-decoration:none;color:var(--ink-soft);font-size:.9rem;font-weight:500}
   .nav-back:hover{color:var(--ink)}
 
-  main{padding-top:clamp(40px,7vw,72px);padding-bottom:clamp(56px,9vw,110px)}
-  .back{display:inline-flex;align-items:center;gap:.45rem;text-decoration:none;color:var(--evergreen);font-family:"IBM Plex Mono",monospace;font-size:.78rem;letter-spacing:.04em;margin-bottom:1.6rem}
+  main{padding-top:clamp(36px,6vw,64px);padding-bottom:clamp(56px,9vw,110px)}
+  .back{display:inline-flex;align-items:center;gap:.45rem;text-decoration:none;color:var(--evergreen);font-family:"IBM Plex Mono",monospace;font-size:.78rem;margin-bottom:1.6rem}
   .back:hover{gap:.7rem}
   .p-tag{font-family:"IBM Plex Mono",monospace;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--evergreen);font-weight:500}
-  h1{font-family:"Bricolage Grotesque",serif;font-weight:700;font-size:clamp(2.2rem,5.5vw,3.6rem);line-height:1.02;letter-spacing:-.03em;margin:.7rem 0 0}
-  .p-summary{font-size:clamp(1.1rem,1.7vw,1.3rem);color:var(--ink-soft);margin:1rem 0 0;max-width:46ch}
+  h1{font-family:"Bricolage Grotesque",serif;font-weight:700;font-size:clamp(2.1rem,5vw,3.4rem);line-height:1.04;letter-spacing:-.03em;margin:.7rem 0 0}
+  .p-summary{font-size:clamp(1.08rem,1.6vw,1.28rem);color:var(--ink-soft);margin:1rem 0 0;max-width:52ch}
 
-  .hero-img{margin:2.4rem 0 0;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--card);box-shadow:0 22px 48px -30px rgba(21,34,42,.4)}
-  .hero-img img{width:100%;height:auto}
+  .cover{margin:2.2rem 0 0;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--card);box-shadow:0 22px 48px -30px rgba(21,34,42,.4)}
+  .cover img{width:100%;height:auto}
   .ph-hero{aspect-ratio:16/9;background:linear-gradient(135deg,#0A4C41,#12303a);position:relative}
   .ph-hero svg{position:absolute;inset:0;width:100%;height:100%}
 
-  .body{margin:2.6rem 0 0;max-width:64ch}
-  .body p{margin:0 0 1.1rem;color:var(--ink)}
-  .body b{color:var(--evergreen-deep);font-weight:600}
+  /* live power bi embed */
+  .embed-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin:2.6rem 0 .8rem}
+  .embed-full{font-family:"IBM Plex Mono",monospace;font-size:.74rem;color:var(--evergreen);text-decoration:none;white-space:nowrap}
+  .embed-full:hover{text-decoration:underline}
+  .embed-wrap{position:relative;width:100%;aspect-ratio:16/9;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--card);box-shadow:0 22px 48px -30px rgba(21,34,42,.4)}
+  .embed-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+  @media(max-width:640px){.embed-wrap{aspect-ratio:3/4}}
 
-  .gallery{margin:2.4rem 0 0;display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
-  @media(max-width:640px){.gallery{grid-template-columns:1fr}}
-  .gallery figure{margin:0;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--card)}
-  .gallery img{width:100%;height:100%;object-fit:cover}
+  /* write-up sections */
+  .sec{margin:2.8rem 0 0}
+  .sec h2{font-family:"Bricolage Grotesque",serif;font-weight:600;font-size:clamp(1.35rem,2.4vw,1.7rem);letter-spacing:-.01em;margin:0 0 .9rem;max-width:60ch}
+  .sec p{margin:0 0 1rem;color:var(--ink);max-width:70ch}
+  .sec b{color:var(--evergreen-deep);font-weight:600}
+  .sec-img{margin:0 0 1.3rem;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--card)}
+  .sec-img img{width:100%;height:auto}
+  .sec-img figcaption{font-family:"IBM Plex Mono",monospace;font-size:.72rem;color:var(--ink-faint);padding:.6rem .9rem;border-top:1px solid var(--line-soft)}
 
-  .links{margin:2.6rem 0 0;display:flex;flex-wrap:wrap;gap:.75rem}
+  .links{margin:3rem 0 0;display:flex;flex-wrap:wrap;gap:.75rem}
   .btn{text-decoration:none;font-weight:600;font-size:.92rem;padding:.72rem 1.25rem;border-radius:10px;display:inline-flex;align-items:center;gap:.5rem;transition:transform .15s,background .2s,border-color .2s}
   .btn svg{width:15px;height:15px}
   .btn-primary{background:var(--ink);color:var(--paper)}
@@ -101,16 +108,19 @@
 
   (function(){
     const mount = document.getElementById('content');
-    const esch = v => String(v==null?'':v).replace(/[&<>]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
-    const fmt  = v => esch(v).replace(/\*([^*]+)\*/g, '<b>$1</b>');
+    let YEARS = '';
+    const subst = v => String(v==null?'':v).replace(/\{years\}/g, YEARS);
+    const esch = v => subst(v).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+    const fmt  = v => subst(v).replace(/[&<>]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[c])).replace(/\*([^*]+)\*/g,'<b>$1</b>');
 
     const notFound = msg => {
-      mount.innerHTML = '<div class="notfound"><h1>Project not found</h1><p>'+esch(msg)+'</p>'+
+      mount.innerHTML = '<div class="notfound"><h1>Project not found</h1><p>'+fmt(msg)+'</p>'+
         '<p style="margin-top:1.6rem"><a class="btn btn-primary" href="index.html">Back to home</a></p></div>';
     };
 
     const S = window.SITE;
     if(!S || !Array.isArray(S.projects)){ notFound('The content file could not be loaded.'); return; }
+    (function(){ const s=String(S.career_start==null?'':S.career_start).trim(); const d=/^\d{4}$/.test(s)?new Date(+s,0,1):new Date(s); if(s&&!isNaN(d)){ const now=new Date(); let y=now.getFullYear()-d.getFullYear(); const m=now.getMonth()-d.getMonth(); if(m<0||(m===0&&now.getDate()<d.getDate())) y--; YEARS=y; } })();
 
     const slug = new URLSearchParams(location.search).get('p');
     if(!slug){ notFound('No project was specified.'); return; }
@@ -120,30 +130,43 @@
 
     document.title = (p.title || 'Project') + ' — Gbolahan Towobola';
 
+    // cover image (or a branded placeholder)
     const heroMotif = '<div class="ph-hero"><svg viewBox="0 0 320 180" preserveAspectRatio="none" aria-hidden="true">'
       + '<g stroke="rgba(255,255,255,.09)" stroke-width="1"><line x1="0" y1="45" x2="320" y2="45"/><line x1="0" y1="90" x2="320" y2="90"/><line x1="0" y1="135" x2="320" y2="135"/></g>'
       + '<path d="M0 150 C 70 140, 90 70, 160 65 S 260 30, 320 22" fill="none" stroke="rgba(143,224,208,.7)" stroke-width="2.5"/></svg></div>';
+    const cover = p.img
+      ? '<div class="cover"><img src="'+esch(p.img)+'" alt="'+esch(p.title)+'"></div>'
+      : '<div class="cover">'+heroMotif+'</div>';
 
-    const hero = p.img
-      ? '<div class="hero-img"><img src="'+esch(p.img)+'" alt="'+esch(p.title)+'"></div>'
-      : '<div class="hero-img">'+heroMotif+'</div>';
+    // live Power BI embed
+    const embed = p.embed
+      ? '<div class="embed-head"><span class="p-tag">Live report</span>'
+        + '<a class="embed-full" href="'+esch(p.embed)+'" target="_blank" rel="noopener">Open full screen &#8599;</a></div>'
+        + '<div class="embed-wrap"><iframe title="'+esch(p.title)+' — Power BI report" src="'+esch(p.embed)+'" allowfullscreen loading="lazy"></iframe></div>'
+      : '';
 
-    const body = Array.isArray(p.body) && p.body.length
-      ? '<div class="body">'+p.body.map(par=>'<p>'+fmt(par)+'</p>').join('')+'</div>' : '';
+    // write-up sections
+    const sections = Array.isArray(p.sections) ? p.sections.map(s=>{
+      const head = s.heading ? '<h2>'+fmt(s.heading)+'</h2>' : '';
+      const img  = s.image ? '<figure class="sec-img"><img src="'+esch(s.image)+'" alt="'+esch(s.heading||p.title)+'" loading="lazy">'
+                    + (s.caption ? '<figcaption>'+esch(s.caption)+'</figcaption>' : '') + '</figure>' : '';
+      const body = Array.isArray(s.body) ? s.body.map(par=>'<p>'+fmt(par)+'</p>').join('')
+                    : (s.body ? '<p>'+fmt(s.body)+'</p>' : '');
+      return '<section class="sec">'+head+img+body+'</section>';
+    }).join('') : '';
 
-    const gallery = Array.isArray(p.gallery) && p.gallery.length
-      ? '<div class="gallery">'+p.gallery.map(src=>'<figure><img src="'+esch(src)+'" alt="'+esch(p.title)+' screenshot" loading="lazy"></figure>').join('')+'</div>' : '';
-
+    // buttons
     const arrow = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17 17 7M9 7h8v8"/></svg>';
     const links = Array.isArray(p.links) && p.links.length
-      ? '<div class="links">'+p.links.map((l,i)=>'<a class="btn '+(i===0?'btn-primary':'btn-ghost')+'" href="'+esch(l.url)+'" target="_blank" rel="noopener">'+esch(l.label)+arrow+'</a>').join('')+'</div>' : '';
+      ? '<div class="links">'+p.links.map((l,i)=>'<a class="btn '+(i===0?'btn-primary':'btn-ghost')+'" href="'+esch(l.url)+'" target="_blank" rel="noopener">'+esch(l.label)+arrow+'</a>').join('')+'</div>'
+      : '';
 
     mount.innerHTML =
       '<a class="back" href="index.html#projects">&larr; All projects</a>'+
       (p.tag ? '<div class="p-tag">'+esch(p.tag)+'</div>' : '')+
       '<h1>'+fmt(p.title||'')+'</h1>'+
       (p.summary ? '<p class="p-summary">'+fmt(p.summary)+'</p>' : '')+
-      hero + body + gallery + links;
+      cover + embed + sections + links;
   })();
 </script>
 </body>
