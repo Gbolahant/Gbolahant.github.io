@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Project — Gbolahan Towobola</title>
+<meta name="description" content="Project detail — Gbolahan Towobola" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --paper:#EFF0EB;--paper-2:#F6F7F2;--card:#FBFCF8;
+    --ink:#15222A;--ink-soft:#54636B;--ink-faint:#879499;
+    --line:#D9DAD2;--line-soft:#E6E7E0;
+    --evergreen:#0F6B5C;--evergreen-deep:#0A4C41;--amber:#D68A1E;--focus:#0F6B5C;
+    --max:920px;--pad:clamp(20px,5vw,64px);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--paper);color:var(--ink);
+    font-family:"Inter",system-ui,-apple-system,sans-serif;font-size:clamp(15px,1.05vw,16.5px);line-height:1.65;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  img{max-width:100%;display:block}
+  ::selection{background:var(--evergreen);color:#fff}
+  .wrap{max-width:var(--max);margin:0 auto;padding-left:var(--pad);padding-right:var(--pad)}
+  .mono{font-family:"IBM Plex Mono",monospace}
+
+  header.nav{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--paper) 82%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px;max-width:var(--max);margin:0 auto;padding-left:var(--pad);padding-right:var(--pad)}
+  .brand{display:flex;align-items:center;gap:.65rem;text-decoration:none;font-weight:600}
+  .monogram{width:34px;height:34px;border-radius:8px;display:grid;place-items:center;background:var(--ink);color:var(--paper);font-family:"Bricolage Grotesque",serif;font-weight:700;font-size:.95rem}
+  .brand-name{font-family:"Bricolage Grotesque",serif;font-size:1rem}
+  .nav-back{text-decoration:none;color:var(--ink-soft);font-size:.9rem;font-weight:500;display:inline-flex;align-items:center;gap:.4rem}
+  .nav-back:hover{color:var(--ink)}
+
+  main{padding-top:clamp(40px,7vw,72px);padding-bottom:clamp(56px,9vw,110px)}
+  .back{display:inline-flex;align-items:center;gap:.45rem;text-decoration:none;color:var(--evergreen);font-family:"IBM Plex Mono",monospace;font-size:.78rem;letter-spacing:.04em;margin-bottom:1.6rem}
+  .back:hover{gap:.7rem}
+  .p-tag{font-family:"IBM Plex Mono",monospace;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--evergreen);font-weight:500}
+  h1{font-family:"Bricolage Grotesque",serif;font-weight:700;font-size:clamp(2.2rem,5.5vw,3.6rem);line-height:1.02;letter-spacing:-.03em;margin:.7rem 0 0}
+  .p-summary{font-size:clamp(1.1rem,1.7vw,1.3rem);color:var(--ink-soft);margin:1rem 0 0;max-width:46ch}
+
+  .hero-img{margin:2.4rem 0 0;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--card);box-shadow:0 22px 48px -30px rgba(21,34,42,.4)}
+  .hero-img img{width:100%;height:auto}
+  .ph-hero{aspect-ratio:16/9;background:linear-gradient(135deg,#0A4C41,#12303a);position:relative}
+  .ph-hero svg{position:absolute;inset:0;width:100%;height:100%}
+
+  .body{margin:2.6rem 0 0;max-width:64ch}
+  .body p{margin:0 0 1.1rem;color:var(--ink)}
+  .body b{color:var(--evergreen-deep);font-weight:600}
+
+  .gallery{margin:2.4rem 0 0;display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+  @media(max-width:640px){.gallery{grid-template-columns:1fr}}
+  .gallery figure{margin:0;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--card)}
+  .gallery img{width:100%;height:100%;object-fit:cover}
+
+  .links{margin:2.6rem 0 0;display:flex;flex-wrap:wrap;gap:.75rem}
+  .btn{text-decoration:none;font-weight:600;font-size:.92rem;padding:.72rem 1.25rem;border-radius:10px;display:inline-flex;align-items:center;gap:.5rem;transition:transform .15s,background .2s,border-color .2s}
+  .btn svg{width:15px;height:15px}
+  .btn-primary{background:var(--ink);color:var(--paper)}
+  .btn-primary:hover{background:var(--evergreen-deep);transform:translateY(-1px)}
+  .btn-ghost{border:1px solid var(--line);color:var(--ink)}
+  .btn-ghost:hover{border-color:var(--ink);transform:translateY(-1px)}
+
+  .notfound{text-align:center;padding:3rem 0}
+  .notfound h1{font-size:clamp(1.8rem,4vw,2.6rem)}
+  .notfound p{color:var(--ink-soft);margin-top:1rem}
+
+  footer{border-top:1px solid var(--line);padding:2rem 0}
+  .foot-inner{max-width:var(--max);margin:0 auto;padding-left:var(--pad);padding-right:var(--pad);display:flex;justify-content:space-between;flex-wrap:wrap;gap:.6rem;font-family:"IBM Plex Mono",monospace;font-size:.74rem;color:var(--ink-faint)}
+  a:focus-visible,.btn:focus-visible{outline:2px solid var(--focus);outline-offset:3px;border-radius:6px}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html" aria-label="Gbolahan Towobola — home">
+      <span class="monogram">GT</span>
+      <span class="brand-name">Gbolahan&nbsp;Towobola</span>
+    </a>
+    <a class="nav-back" href="index.html#projects">All projects</a>
+  </div>
+</header>
+
+<main>
+  <div class="wrap" id="content"><!-- rendered from content.js --></div>
+</main>
+
+<footer>
+  <div class="foot-inner">
+    <span>© <span id="yr"></span> Gbolahan Towobola</span>
+    <span>Lagos, Nigeria</span>
+  </div>
+</footer>
+
+<script src="content.js"></script>
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  (function(){
+    const mount = document.getElementById('content');
+    const esch = v => String(v==null?'':v).replace(/[&<>]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+    const fmt  = v => esch(v).replace(/\*([^*]+)\*/g, '<b>$1</b>');
+
+    const notFound = msg => {
+      mount.innerHTML = '<div class="notfound"><h1>Project not found</h1><p>'+esch(msg)+'</p>'+
+        '<p style="margin-top:1.6rem"><a class="btn btn-primary" href="index.html">Back to home</a></p></div>';
+    };
+
+    const S = window.SITE;
+    if(!S || !Array.isArray(S.projects)){ notFound('The content file could not be loaded.'); return; }
+
+    const slug = new URLSearchParams(location.search).get('p');
+    if(!slug){ notFound('No project was specified.'); return; }
+
+    const p = S.projects.find(x => x.slug === slug);
+    if(!p){ notFound('There is no project with the address “'+slug+'”.'); return; }
+
+    document.title = (p.title || 'Project') + ' — Gbolahan Towobola';
+
+    const heroMotif = '<div class="ph-hero"><svg viewBox="0 0 320 180" preserveAspectRatio="none" aria-hidden="true">'
+      + '<g stroke="rgba(255,255,255,.09)" stroke-width="1"><line x1="0" y1="45" x2="320" y2="45"/><line x1="0" y1="90" x2="320" y2="90"/><line x1="0" y1="135" x2="320" y2="135"/></g>'
+      + '<path d="M0 150 C 70 140, 90 70, 160 65 S 260 30, 320 22" fill="none" stroke="rgba(143,224,208,.7)" stroke-width="2.5"/></svg></div>';
+
+    const hero = p.img
+      ? '<div class="hero-img"><img src="'+esch(p.img)+'" alt="'+esch(p.title)+'"></div>'
+      : '<div class="hero-img">'+heroMotif+'</div>';
+
+    const body = Array.isArray(p.body) && p.body.length
+      ? '<div class="body">'+p.body.map(par=>'<p>'+fmt(par)+'</p>').join('')+'</div>' : '';
+
+    const gallery = Array.isArray(p.gallery) && p.gallery.length
+      ? '<div class="gallery">'+p.gallery.map(src=>'<figure><img src="'+esch(src)+'" alt="'+esch(p.title)+' screenshot" loading="lazy"></figure>').join('')+'</div>' : '';
+
+    const arrow = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17 17 7M9 7h8v8"/></svg>';
+    const links = Array.isArray(p.links) && p.links.length
+      ? '<div class="links">'+p.links.map((l,i)=>'<a class="btn '+(i===0?'btn-primary':'btn-ghost')+'" href="'+esch(l.url)+'" target="_blank" rel="noopener">'+esch(l.label)+arrow+'</a>').join('')+'</div>' : '';
+
+    mount.innerHTML =
+      '<a class="back" href="index.html#projects">&larr; All projects</a>'+
+      (p.tag ? '<div class="p-tag">'+esch(p.tag)+'</div>' : '')+
+      '<h1>'+fmt(p.title||'')+'</h1>'+
+      (p.summary ? '<p class="p-summary">'+fmt(p.summary)+'</p>' : '')+
+      hero + body + gallery + links;
+  })();
+</script>
+</body>
+</html>
