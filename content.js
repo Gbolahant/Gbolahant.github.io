@@ -51,7 +51,7 @@ window.SITE = {
 
   about: {
     eyebrow: "The short version",
-    lead: "Most of my work lives at the seam between *credit risk*, data analytics and *data engineering*.",
+    lead: "Most of my work lives at the seam between *credit risk*, *data analytics* and *data engineering*.",
     body: "I write the SQL that shapes loan-performance data, model how cohorts repay across their life, test credit-policy changes before they ship, and build the Power BI reporting leadership actually uses to make calls. I care about analytics that ends in a decision — not a slide that gets admired and forgotten.",
     aside: [
       { label: "Currently",  value: "Credit & BI Portfolio Manager" },
