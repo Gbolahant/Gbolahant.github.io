@@ -33,14 +33,14 @@ window.SITE = {
   // The year you started working. The site counts the years from here
   // automatically, so the number above never goes out of date.
   // Write {years} in any text and it becomes the current number.
-  career_start: 2021,
+  career_start: 2018,
   stat2: "SQL · Power BI · Python",
   stat3: "Lagos, NG",
 
 
   /* ---------- CONTACT & LINKS ---------- */
 
-  email:    "hello@example.com",
+  email:    "Gbolahant@gmail.com",
   linkedin: "https://www.linkedin.com/in/gbolahantowobola1",
   github:   "https://github.com/Gbolahant",
   twitter:  "https://twitter.com/gbolahant1",
@@ -51,13 +51,14 @@ window.SITE = {
 
   about: {
     eyebrow: "The short version",
-    lead: "Most of my work lives at the seam between *credit risk* and *data engineering*.",
+    lead: "Most of my work lives at the seam between *credit risk*, data analytics and *data engineering*.",
     body: "I write the SQL that shapes loan-performance data, model how cohorts repay across their life, test credit-policy changes before they ship, and build the Power BI reporting leadership actually uses to make calls. I care about analytics that ends in a decision — not a slide that gets admired and forgotten.",
     aside: [
       { label: "Currently",  value: "Credit & BI Portfolio Manager" },
       { label: "Focus",      value: "Loan performance, credit policy & experimentation" },
       { label: "Background",  value: "Consumer lending & fintech, Nigeria" },
-      { label: "Also",        value: "Teaching data skills · investing" },
+      { label: "Also",        value: "Teaching data skills · Esport" },
+      { label: "Learning",    value: "Data Engineering" },
     ],
   },
 
@@ -66,7 +67,7 @@ window.SITE = {
 
   work_eyebrow: "What I do",
   work_heading: "Four things I get called in for.",
-  work_intro: "The through-line: I don’t hand off between “analyst” and “engineer.” I build the pipeline, the model and the report — so the answer arrives whole.",
+work_intro: "The through-line: I don’t hand off between “analyst” and “engineer.” I build the pipeline, the model and the report — so the answer arrives whole.",
 
   capabilities: [
     { title: "Loan portfolio & cohort analytics", body: "Vintage curves that track collection rate, first-payment default, approval rate and average ticket size across new and renewal cohorts — and across the loan sequence, so you can see exactly where a book earns or leaks." },
@@ -83,7 +84,7 @@ window.SITE = {
     heading: "Owned end to end — source to decision.",
     lead: "Most analysts own one slice of the reporting stack. I build all of it: the *SQL* that shapes the data, the *semantic model and DAX* behind it, and the *Power BI* reports on top — so every number on the executive dashboard traces cleanly back to source, and there’s one version of the truth.",
     steps: [
-      { kicker: "Ingest", title: "Source systems",       sub: "loans · payments · scores" },
+      /*  { kicker: "Ingest", title: "Source systems",       sub: "loans · payments · scores" }, */
       { kicker: "Model",  title: "SQL & warehouse",      sub: "cleaned · tested · documented" },
       { kicker: "Shape",  title: "Semantic model + DAX", sub: "star schema · measures" },
       { kicker: "Report", title: "Power BI",             sub: "MIS · dashboards" },
