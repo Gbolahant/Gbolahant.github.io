@@ -217,19 +217,29 @@ work_intro: "The through-line: I don’t hand off between “analyst” and “e
       slug: "cv-dashboard",
       title: "CV Dashboard",
       tag: "Power BI",
+      // TODO: no screenshot exists yet for this one — either add a picture to
+      // images/cv-dashboard/ and point img at it, or paste a Power BI
+      // "Publish to web" link into the "embed" field below to show the live report.
       img: "",
       blurb: "An interactive résumé rebuilt as a Power BI report — experience, skills and impact as a filterable model instead of a static page.",
       summary: "A résumé you can filter — built in Power BI.",
       embed: "",
-      links: [ { label: "View original", url: "https://sites.google.com/view/gbolahantowobola/project/cv-dashboard" } ],
+      links: [],
       sections: [
         {
           heading: "Overview",
           image: "",
           caption: "",
           body: [
-            "Instead of a flat PDF, this rebuilds a career history as a Power BI model you can slice by role, skill and year.",
-            "Replace this with the story: what you wanted to show, how you modelled it, and what makes it worth a click. Paste your Power BI link into the “embed” field above to show the live report.",
+            "TODO: what you wanted this dashboard to show, and why a résumé works as a BI model.",
+          ],
+        },
+        {
+          heading: "How it's built",
+          image: "",
+          caption: "",
+          body: [
+            "TODO: how the data is modelled (roles, skills, years) and what's filterable.",
           ],
         },
       ],
@@ -239,20 +249,62 @@ work_intro: "The through-line: I don’t hand off between “analyst” and “e
       slug: "sales-analysis",
       title: "Sales Analysis",
       tag: "Python",
-      img: "",
+      // Screenshots saved into images/sales-analysis/ — see README "Add screenshots".
+      img: "images/sales-analysis/sales-trend-by-year.png",
       blurb: "End-to-end analysis in pandas — cleaning, aggregation and trend breakdowns turning a raw transaction file into a readable revenue story.",
       summary: "From a raw transaction file to a revenue story, in pandas.",
       embed: "",
-      links: [ { label: "View original", url: "https://sites.google.com/view/gbolahantowobola/project/sales-analysis" } ],
+      links: [],
       sections: [
         {
           heading: "Overview",
           image: "",
           caption: "",
           body: [
-            "A full pass over messy sales data in Python: cleaning, grouping, and pulling out the trends that actually matter.",
-            "Replace this with the dataset, the questions you asked, and the findings. Add screenshots by setting an “image” on a section.",
+            "TODO: the dataset, the questions you asked, and the tools used (pandas / matplotlib etc).",
           ],
+        },
+        {
+          heading: "Sales trend by year",
+          image: "images/sales-analysis/sales-trend-by-year.png",
+          caption: "Sales trend by year",
+          body: [ "TODO: what this chart shows." ],
+        },
+        {
+          heading: "Sales trend by month",
+          image: "images/sales-analysis/sales-trend-by-month-year.png",
+          caption: "Sales trend by month & year",
+          body: [ "TODO: what this chart shows." ],
+        },
+        {
+          heading: "Seasonal pattern",
+          image: "images/sales-analysis/seasonal-pattern.png",
+          caption: "Seasonal sales pattern",
+          body: [ "TODO: what this chart shows." ],
+        },
+        {
+          heading: "Top 10 products by revenue",
+          image: "images/sales-analysis/top10-products-by-revenue.png",
+          caption: "Top 10 products by revenue",
+          body: [ "TODO: what this chart shows." ],
+        },
+        {
+          heading: "Top 10 products by quantity",
+          image: "images/sales-analysis/top10-products-by-quantity.png",
+          caption: "Top 10 products by quantity",
+          body: [ "TODO: what this chart shows." ],
+        },
+        {
+          heading: "Shipping mode distribution",
+          image: "images/sales-analysis/shipping-mode-distribution.png",
+          caption: "Shipping mode distribution",
+          body: [ "TODO: what this chart shows." ],
+        },
+        {
+          heading: "Conclusion & recommendations",
+          image: "",
+          caption: "",
+          body: [ "TODO: findings and recommendations." ],
         },
       ],
     },
@@ -261,20 +313,32 @@ work_intro: "The through-line: I don’t hand off between “analyst” and “e
       slug: "covid-19-dashboard",
       title: "COVID-19 Dashboard",
       tag: "Excel",
-      img: "",
+      // Screenshot saved into images/covid-19-dashboard/ — see README "Add screenshots".
+      img: "images/covid-19-dashboard/dashboard-overview.png",
       blurb: "A self-updating Excel dashboard with dynamic charts and KPIs — proof that a spreadsheet can still be a proper reporting tool when it’s built well.",
       summary: "A spreadsheet that behaves like a real reporting tool.",
       embed: "",
-      links: [ { label: "View original", url: "https://sites.google.com/view/gbolahantowobola/project/covid-19-dashboard" } ],
+      links: [],
       sections: [
         {
           heading: "Overview",
           image: "",
           caption: "",
           body: [
-            "Dynamic charts, KPI cards and a layout that refreshes itself — Excel pushed to do the job of a BI tool.",
-            "Replace this with how you structured the workbook and what it tracked.",
+            "TODO: what the workbook tracked and why Excel instead of a BI tool.",
           ],
+        },
+        {
+          heading: "Dashboard",
+          image: "images/covid-19-dashboard/dashboard-overview.png",
+          caption: "Dashboard overview",
+          body: [ "TODO: what's shown and how it updates." ],
+        },
+        {
+          heading: "Conclusion",
+          image: "",
+          caption: "",
+          body: [ "TODO: how it was built and what it's for." ],
         },
       ],
     },

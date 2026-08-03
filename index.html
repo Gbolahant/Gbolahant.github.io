@@ -8,6 +8,29 @@
 <meta property="og:title" content="Gbolahan Towobola — Credit &amp; Business Intelligence" />
 <meta property="og:description" content="Credit risk analytics, built end to end — from SQL pipeline to the decision on the table." />
 <meta property="og:type" content="website" />
+<meta property="og:image" content="https://gbolahant.github.io/images/og-cover.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+<!-- If you change your name, email or social links in content.js, update
+     the block below too — it's static and not synced automatically. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Gbolahan Towobola",
+  "email": "mailto:Gbolahant@gmail.com",
+  "jobTitle": "Credit & Business Intelligence",
+  "description": "Builds the analytics behind lending decisions — cohort loan performance, credit policy testing, and the BI reporting leadership uses to make calls on approval, limits and collections.",
+  "url": "https://gbolahant.github.io/",
+  "sameAs": [
+    "https://www.linkedin.com/in/gbolahantowobola1",
+    "https://github.com/Gbolahant",
+    "https://twitter.com/gbolahant1",
+    "https://www.credly.com/users/gbolahan-towobola"
+  ]
+}
+</script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -427,23 +450,23 @@
         <p class="reveal" data-field="projects-intro">Demo work spanning Power BI, Python and Excel. The credit-portfolio work above is under NDA — happy to walk through it on a call.</p>
       </div>
       <div class="proj-grid" id="projGrid">
-        <a class="proj reveal" href="https://sites.google.com/view/gbolahantowobola/project/cv-dashboard" target="_blank" rel="noopener">
+        <a class="proj reveal" href="project.html?p=cv-dashboard">
           <span class="tag">Power BI</span>
           <h3>CV Dashboard</h3>
           <p>An interactive résumé rebuilt as a Power BI report — experience, skills and impact as a filterable model instead of a static page.</p>
-          <span class="go">View <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          <span class="go">Open <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
         </a>
-        <a class="proj reveal" href="https://sites.google.com/view/gbolahantowobola/project/sales-analysis" target="_blank" rel="noopener">
+        <a class="proj reveal" href="project.html?p=sales-analysis">
           <span class="tag">Python</span>
           <h3>Sales Analysis</h3>
           <p>End-to-end analysis in pandas — cleaning, aggregation and trend breakdowns turning a raw transaction file into a readable revenue story.</p>
-          <span class="go">View <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          <span class="go">Open <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
         </a>
-        <a class="proj reveal" href="https://sites.google.com/view/gbolahantowobola/project/covid-19-dashboard" target="_blank" rel="noopener">
+        <a class="proj reveal" href="project.html?p=covid-19-dashboard">
           <span class="tag">Excel</span>
           <h3>COVID-19 Dashboard</h3>
           <p>A self-updating Excel dashboard with dynamic charts and KPIs — proof that a spreadsheet can still be a proper reporting tool when it's built well.</p>
-          <span class="go">View <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          <span class="go">Open <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
         </a>
       </div>
     </div>
@@ -708,10 +731,9 @@
     const projects = (window.SITE && Array.isArray(window.SITE.projects) && window.SITE.projects.length)
       ? window.SITE.projects
       : [
-      { title:'CV Dashboard',       tag:'Power BI', href:'https://sites.google.com/view/gbolahantowobola/project/cv-dashboard',      img:'' },
-      { title:'Sales Analysis',     tag:'Python',   href:'https://sites.google.com/view/gbolahantowobola/project/sales-analysis',     img:'' },
-      { title:'COVID-19 Dashboard', tag:'Excel',    href:'https://sites.google.com/view/gbolahantowobola/project/covid-19-dashboard', img:'' },
-      { title:'World Cup Viz',      tag:'Power BI', href:'https://sites.google.com/view/gbolahantowobola/project/world-cup-viz',      img:'' },
+      { title:'CV Dashboard',       tag:'Power BI', slug:'cv-dashboard',       img:'' },
+      { title:'Sales Analysis',     tag:'Python',   slug:'sales-analysis',     img:'' },
+      { title:'COVID-19 Dashboard', tag:'Excel',    slug:'covid-19-dashboard', img:'' },
     ];
 
     const root = document.getElementById('projCarousel');
@@ -799,5 +821,9 @@
     els.forEach((e,i)=>{e.style.transitionDelay=(Math.min(i%4,3)*0.06)+'s';io.observe(e);});
   })();
 </script>
+
+<!-- Free, cookie-free analytics. Create an account at https://goatcounter.com,
+     then replace YOUR-CODE below with your site code (see README). -->
+<script data-goatcounter="https://YOUR-CODE.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>

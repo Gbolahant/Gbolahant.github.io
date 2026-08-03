@@ -75,6 +75,45 @@ and `links` (buttons) to flesh out its page.
    ```
    Leave `img: ""` to show a plain coloured tile instead.
 
+### Finish the CV Dashboard, Sales Analysis and COVID-19 Dashboard pages
+These three projects in `content.js` are wired up with real screenshots
+already downloaded for Sales Analysis and COVID-19 Dashboard (in
+`images/sales-analysis/` and `images/covid-19-dashboard/`) — CV Dashboard
+still needs one (no screenshot existed on the old page; add one, or paste a
+Power BI "Publish to web" link into that project's `embed` field). Every
+`"TODO: ..."` line inside each project's `sections` is placeholder text —
+open `content.js`, search for `TODO`, and replace each one with the real
+write-up.
+
+### Set up analytics (optional)
+The site ships with a free, cookie-free visit counter from
+[GoatCounter](https://goatcounter.com):
+1. Create a free account at goatcounter.com and pick a site code.
+2. In both `index.html` and `project.html`, find the line near the bottom
+   that starts `<script data-goatcounter=...>` and replace `YOUR-CODE` with
+   your site code.
+3. Commit. Visits will start showing up in your GoatCounter dashboard.
+
+### Adding a new project — one extra step
+Besides adding a block to `content.js`'s `projects:` list, also add a line
+to `sitemap.xml` (it isn't generated automatically):
+```xml
+<url><loc>https://gbolahant.github.io/project.html?p=YOUR-SLUG</loc></url>
+```
+
+### If you change your name, email or social links
+Also update the `<script type="application/ld+json">` block near the top of
+`index.html`'s `<head>` (search for `ld+json`) — it's static and isn't
+synced from `content.js` automatically.
+
+### Known limitation: sharing a project link
+When someone shares a `project.html?p=...` link on LinkedIn, Twitter or
+Slack, the preview card they see (image/title) will be the site's general
+one, not that specific project's. The browser tab title updates correctly
+once the page opens — this only affects the link-preview card itself,
+because those platforms don't run JavaScript when generating previews, and
+this site has no build step that could generate a real per-project page.
+
 ---
 
 ## 🚀 How this site is published (for reference)
