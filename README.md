@@ -85,14 +85,11 @@ Power BI "Publish to web" link into that project's `embed` field). Every
 open `content.js`, search for `TODO`, and replace each one with the real
 write-up.
 
-### Set up analytics (optional)
-The site ships with a free, cookie-free visit counter from
-[GoatCounter](https://goatcounter.com):
-1. Create a free account at goatcounter.com and pick a site code.
-2. In both `index.html` and `project.html`, find the line near the bottom
-   that starts `<script data-goatcounter=...>` and replace `YOUR-CODE` with
-   your site code.
-3. Commit. Visits will start showing up in your GoatCounter dashboard.
+### Analytics
+The site has a free, cookie-free visit counter from
+[GoatCounter](https://goatcounter.com) already wired in (site code `ghide`).
+See your visit stats any time at
+[ghide.goatcounter.com](https://ghide.goatcounter.com).
 
 ### Adding a new project — one extra step
 Besides adding a block to `content.js`'s `projects:` list, also add a line
