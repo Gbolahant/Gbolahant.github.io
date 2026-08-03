@@ -214,32 +214,94 @@ work_intro: "The through-line: I don’t hand off between “analyst” and “e
     },
 
     {
-      slug: "cv-dashboard",
-      title: "CV Dashboard",
+      slug: "inventory-management-analysis",
+      title: "Inventory Management Analysis",
       tag: "Power BI",
-      // TODO: no screenshot exists yet for this one — either add a picture to
-      // images/cv-dashboard/ and point img at it, or paste a Power BI
-      // "Publish to web" link into the "embed" field below to show the live report.
-      img: "",
-      blurb: "An interactive résumé rebuilt as a Power BI report — experience, skills and impact as a filterable model instead of a static page.",
-      summary: "A résumé you can filter — built in Power BI.",
-      embed: "",
-      links: [],
+      img: "https://raw.githubusercontent.com/Gbolahant/Inventory-Management-Analysis/main/Overvie.png",
+      blurb: "A Power BI inventory optimization report for a retailer battling stockouts and overstock — turnover, ABC/XYZ analysis and demand forecasting in one model.",
+      summary: "Turning stockouts and overstock into a turnover, ABC/XYZ and forecasting model — in Power BI.",
+      embed: "https://app.powerbi.com/view?r=eyJrIjoiM2Q4ZTVkMmMtMmYwZi00YzQ2LWFjNDMtNDYwY2YyMzkwNDY2IiwidCI6ImQ2YjZlODcwLTkwNTgtNDgzOS1hOTJiLTNiNzRhMGI1ODliMSJ9",
+      links: [
+        { label: "Open full report", url: "https://app.powerbi.com/view?r=eyJrIjoiM2Q4ZTVkMmMtMmYwZi00YzQ2LWFjNDMtNDYwY2YyMzkwNDY2IiwidCI6ImQ2YjZlODcwLTkwNTgtNDgzOS1hOTJiLTNiNzRhMGI1ODliMSJ9" },
+        { label: "Code & docs on GitHub", url: "https://github.com/Gbolahant/Inventory-Management-Analysis" },
+      ],
       sections: [
         {
-          heading: "Overview",
+          heading: "Introduction",
           image: "",
           caption: "",
           body: [
-            "TODO: what you wanted this dashboard to show, and why a résumé works as a BI model.",
+            "FitCapacity, a retailer running on the Adventure Works dataset, was losing money on both ends of the shelf — some products sat out of stock while others piled up unsold. This project builds the Power BI model that tells the difference, and what to do about each.",
           ],
         },
         {
-          heading: "How it's built",
+          heading: "Problem statement",
           image: "",
           caption: "",
           body: [
-            "TODO: how the data is modelled (roles, skills, years) and what's filterable.",
+            "The brief: identify which products turn over fast and which don't, measure how long stockouts actually last, forecast demand for the products that matter most, and sort the catalogue into high-, average- and low-selling tiers — the everyday questions an inventory team needs answered, not just described.",
+          ],
+        },
+        {
+          heading: "Skills demonstrated",
+          image: "",
+          caption: "",
+          body: [
+            "SQL extraction and modelling from the Adventure Works database, DAX for calculated tables and measures, Power BI report design with Deneb custom visuals, tooltips, bookmarks and page navigation, and translating the numbers into recommendations a business can act on.",
+          ],
+        },
+        {
+          heading: "Data sourcing & modelling",
+          image: "https://raw.githubusercontent.com/Gbolahant/Inventory-Management-Analysis/main/Model.png",
+          caption: "Snowflake schema",
+          body: [
+            "Five SQL queries pull inventory, product, sales, purchasing and product-photo data out of Adventure Works into a snowflake model. On top of that sit DAX-built calculated tables — a rolling 365-day daily and weekly demand sheet, a date table — plus two field parameters, *Demand Factor* and *Forecast Days*, that let the Forecast page be adjusted live rather than rebuilt.",
+          ],
+        },
+        {
+          heading: "Overview page",
+          image: "https://raw.githubusercontent.com/Gbolahant/Inventory-Management-Analysis/main/Overvie.png",
+          caption: "Report page 1 — Overview",
+          body: [
+            "*Turnover*: an overall rate of 3.8 — Accessories lead at 15.1, Clothing at 13.5, Bikes at 4.2, Components lag at 2.1.",
+            "*Concentration*: 12 products, all Bikes, drive 42% of annual revenue.",
+            "*Scale*: $73 million in revenue against $14 million of stock on hand.",
+          ],
+        },
+        {
+          heading: "Product page",
+          image: "https://raw.githubusercontent.com/Gbolahant/Inventory-Management-Analysis/main/Product.png",
+          caption: "Report page 2 — Product",
+          body: [
+            "Top and bottom 5 by turnover and by revenue, side by side, plus an *ABC analysis* (which products earn their shelf space) and an *XYZ analysis* (which ones have demand you can actually predict) — together they show where to spend inventory attention first.",
+          ],
+        },
+        {
+          heading: "Forecast page",
+          image: "https://raw.githubusercontent.com/Gbolahant/Inventory-Management-Analysis/main/Forecast.png",
+          caption: "Report page 3 — Forecast",
+          body: [
+            "Built on the Demand Factor and Forecast Days parameters, this page recalculates safety stock and reorder points live as you move the sliders — turning a static forecast into something a planner can actually stress-test.",
+          ],
+        },
+        {
+          heading: "Insight page",
+          image: "https://raw.githubusercontent.com/Gbolahant/Inventory-Management-Analysis/main/Insights.png",
+          caption: "Report page 4 — Insight",
+          body: [
+            "The Insight page rolls the analysis up into the findings that matter — seasonality, turnover, non-moving stock, revenue at risk — with two tooltip pages behind it providing the drill-down detail whenever a stakeholder asks “why.”",
+          ],
+        },
+        {
+          heading: "Conclusion & recommendations",
+          image: "",
+          caption: "",
+          body: [
+            "*Seasonality*: demand isn't flat — inventory planning needs to move with it, not react to it.",
+            "*Low turnover*: a 3.8 rate points to inventory sitting too long on the shelf.",
+            "*128 non-moving products*: identified and flagged for clearance or a hard look at relevance.",
+            "*$1.3 million at risk*: the projected revenue loss over the next 60 days if nothing changes.",
+            "*Recommendations*: tighter demand forecasting, regular inventory audits, right-sized reorder points and safety stock, discontinuing chronic under-performers, and doubling down on the ~12 products already driving 42% of revenue.",
           ],
         },
       ],

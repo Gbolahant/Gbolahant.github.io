@@ -75,15 +75,13 @@ and `links` (buttons) to flesh out its page.
    ```
    Leave `img: ""` to show a plain coloured tile instead.
 
-### Finish the CV Dashboard, Sales Analysis and COVID-19 Dashboard pages
-These three projects in `content.js` are wired up with real screenshots
-already downloaded for Sales Analysis and COVID-19 Dashboard (in
-`images/sales-analysis/` and `images/covid-19-dashboard/`) — CV Dashboard
-still needs one (no screenshot existed on the old page; add one, or paste a
-Power BI "Publish to web" link into that project's `embed` field). Every
-`"TODO: ..."` line inside each project's `sections` is placeholder text —
-open `content.js`, search for `TODO`, and replace each one with the real
-write-up.
+### Finish the Sales Analysis and COVID-19 Dashboard pages
+These two projects in `content.js` are wired up to point at real screenshots
+— save them into `images/sales-analysis/` and `images/covid-19-dashboard/`
+(see "Add screenshots" above for the exact filenames each project expects).
+Every `"TODO: ..."` line inside each project's `sections` is placeholder
+text — open `content.js`, search for `TODO`, and replace each one with the
+real write-up.
 
 ### Analytics
 The site has a free, cookie-free visit counter from
