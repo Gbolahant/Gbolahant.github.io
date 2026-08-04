@@ -127,16 +127,15 @@ work_intro: "The through-line: I don’t hand off between “analyst” and “e
   projects: [
 
     {
-      slug: "twitter-analytics",
-      title: "Twitter Analytics — #30DaysOfLearning",
-      tag: "Power BI",
-      img: "https://github.com/Gbolahant/Twitter-Analytics-of-30daysofLearning/raw/main/Homepage.png",
-      blurb: "A Power BI report on the #30DaysOfLearning campaign — 674 tweets from 204 people, turned into a three-page engagement story.",
-      summary: "A three-page Power BI report on the #30DaysOfLearning Twitter campaign — engagement, reach and audience.",
-      embed: "https://app.powerbi.com/view?r=eyJrIjoiOWIwMWZiOGItYjBlNy00YmNkLWI4NjItMDA4ZTQ3Y2IzZTFlIiwidCI6ImQ2YjZlODcwLTkwNTgtNDgzOS1hOTJiLTNiNzRhMGI1ODliMSJ9&pageName=ReportSection",
+      slug: "marketing-analysis",
+      title: "Marketing Analysis",
+      tag: "Python",
+      img: "https://raw.githubusercontent.com/Gbolahant/Marketing-Analysis/main/images/customer_demographics.png",
+      blurb: "A retail marketing dataset turned into a customer story in pandas — who the best customers are, what they buy, and which campaigns actually earned their budget back.",
+      summary: "Who are the best customers, what do they buy, and which campaigns work — answered in pandas.",
+      embed: "",
       links: [
-        { label: "Open full report", url: "https://app.powerbi.com/view?r=eyJrIjoiOWIwMWZiOGItYjBlNy00YmNkLWI4NjItMDA4ZTQ3Y2IzZTFlIiwidCI6ImQ2YjZlODcwLTkwNTgtNDgzOS1hOTJiLTNiNzRhMGI1ODliMSJ9&pageName=ReportSection" },
-        { label: "Code & data on GitHub", url: "https://github.com/Gbolahant/Twitter-Analytics-of-30daysofLearning" },
+        { label: "Notebook & data on GitHub", url: "https://github.com/Gbolahant/Marketing-Analysis" },
       ],
       sections: [
         {
@@ -144,7 +143,7 @@ work_intro: "The through-line: I don’t hand off between “analyst” and “e
           image: "",
           caption: "",
           body: [
-            "The #30DaysOfLearning campaign encourages people to learn in public and share their progress on Twitter. This report uses Power BI to measure how the hashtag actually performed — its engagement, its reach, and who drove the conversation.",
+            "Marketa is a specialty retailer selling wine, produce, meat, fish, sweets and gift items across three channels — online, catalogue and physical stores. Over two years the marketing team ran five campaigns plus a final one, and tracked how every customer responded. The brief from the Head of Marketing: “We keep spending on campaigns but we don't really know who our best customers are, what they buy, or which campaigns actually work.”",
           ],
         },
         {
@@ -152,7 +151,7 @@ work_intro: "The through-line: I don’t hand off between “analyst” and “e
           image: "",
           caption: "",
           body: [
-            "The campaign generated plenty of activity, but nobody had measured it. Without analysis it was hard to know how many people took part, how far the hashtag travelled, or which content and days drove engagement — exactly the insight needed to plan the next cohort.",
+            "Three questions, one dataset: who are the best customers, what do they actually buy, and which of six campaigns earned its budget back. Answering all three meant turning a raw, slightly messy 2,240-row customer export into something a marketing team could act on.",
           ],
         },
         {
@@ -160,54 +159,75 @@ work_intro: "The through-line: I don’t hand off between “analyst” and “e
           image: "",
           caption: "",
           body: [
-            "Data collection, cleaning and preparation, Power BI modelling and visualisation, insight generation, and turning findings into clear recommendations.",
+            "Data profiling and cleaning, feature engineering, exploratory analysis and RFM (Recency / Frequency / Monetary) customer segmentation — all in Python with pandas, numpy, matplotlib and seaborn, worked through in a Jupyter notebook.",
           ],
         },
         {
-          heading: "Data sourcing & transformation",
-          image: "https://github.com/Gbolahant/Twitter-Analytics-of-30daysofLearning/raw/main/Transformations.png",
-          caption: "Power Query transformations",
+          heading: "Data & cleaning",
+          image: "https://raw.githubusercontent.com/Gbolahant/Marketing-Analysis/main/images/customer_demographics.png",
+          caption: "Customer demographics",
           body: [
-            "Tweets were scraped from Twitter with Python and saved to a CSV file.",
-            "In Power Query I derived a clean date, the day name, and a short day abbreviation (Mon, Tue…) from the raw timestamp — enough to analyse daily patterns without needing a full data model.",
+            "2,240 customers across 28 columns — demographics, spend by category, purchases by channel, campaign responses. Four issues stood in the way of a clean analysis: 24 missing incomes (imputed from the median for that education level), a handful of impossible birth years (three records over age 90 dropped), messy marital-status labels (*YOLO*, *Absurd*, folded into *Other*), and enrolment dates stored as text. What's left skews middle-aged, mostly *Graduation*-educated, and married or living together.",
           ],
         },
         {
-          heading: "Summary page",
-          image: "https://github.com/Gbolahant/Twitter-Analytics-of-30daysofLearning/raw/main/SummaryPage.png",
-          caption: "Report page 1 — Summary",
+          heading: "What customers buy",
+          image: "https://raw.githubusercontent.com/Gbolahant/Marketing-Analysis/main/images/spend_by_category.png",
+          caption: "Spend by product category",
           body: [
-            "*Reach*: 674 tweets from 204 different people in the first two months — active participation for a community campaign.",
-            "*Momentum*: tweet volume rose sharply from May into June as the campaign gained traction.",
-            "*Audience*: 61% of participants tweeted from Android and only 9% from iPhone.",
-            "*Timing*: Wednesdays saw the highest engagement; weekends the lowest.",
+            "Wine and meat *are* the business — wine alone is roughly *50%* of spend, meat another *28%*. Two categories out of six account for the large majority of revenue.",
           ],
         },
         {
-          heading: "Content page",
-          image: "https://github.com/Gbolahant/Twitter-Analytics-of-30daysofLearning/raw/main/Content.png",
-          caption: "Report page 2 — Content",
+          heading: "What drives spending",
+          image: "https://raw.githubusercontent.com/Gbolahant/Marketing-Analysis/main/images/spend_drivers.png",
+          caption: "What drives spending",
           body: [
-            "*Tools*: GitHub was the most-mentioned tool in the conversation; Python the least — a strong lean toward GitHub as the community’s documentation tool.",
-            "*Top voices*: the facilitator @TheOyinbooke dominated the most-liked tweets and the word cloud, while @its_royalgold’s tweet drew the single highest number of likes.",
+            "*Income* is the strongest single driver of spend, correlating at roughly *0.66* — and customers with children spend markedly less: about *1,105* average with none, versus *407* with children.",
           ],
         },
         {
-          heading: "",
-          image: "https://github.com/Gbolahant/Twitter-Analytics-of-30daysofLearning/raw/main/MostLiked.png",
-          caption: "Top 15 most-liked tweets",
-          body: [],
+          heading: "Campaigns",
+          image: "https://raw.githubusercontent.com/Gbolahant/Marketing-Analysis/main/images/campaign_acceptance.png",
+          caption: "Campaign acceptance rate",
+          body: [
+            "Six campaigns, wildly different results: the final campaign converted at roughly *14.9%* — more than *10x* the weakest, Campaign 2, at *1.3%* — a strong signal about which offer, timing and targeting is actually worth repeating.",
+          ],
         },
         {
-          heading: "Conclusion & recommendations",
+          heading: "Channels",
+          image: "https://raw.githubusercontent.com/Gbolahant/Marketing-Analysis/main/images/purchase_channels.png",
+          caption: "Purchase channels",
+          body: [
+            "The physical store leads on volume, but web and catalogue are both substantial — a genuinely omni-channel customer base, with a notable pocket of frequent web visitors who browse but don't convert.",
+          ],
+        },
+        {
+          heading: "Customer segmentation",
+          image: "https://raw.githubusercontent.com/Gbolahant/Marketing-Analysis/main/images/customers_per_segment.png",
+          caption: "Customers per segment",
+          body: [
+            "Every customer is scored on Recency, Frequency and Monetary value (RFM) and sorted into five segments — *Champions*, *Loyal*, *Potential*, *At Risk* and *Hibernating* — each with its own marketing playbook, from loyalty perks for Champions to low-cost reactivation for the dormant tail.",
+          ],
+        },
+        {
+          heading: "Revenue concentration",
+          image: "https://raw.githubusercontent.com/Gbolahant/Marketing-Analysis/main/images/revenue_by_segment.png",
+          caption: "Revenue by segment",
+          body: [
+            "A small *Champions* segment — about *537* customers — drives close to *half* of total revenue, while the two weakest segments combined contribute under *3%*. Protecting that top segment matters more than acquiring new customers at the bottom.",
+          ],
+        },
+        {
+          heading: "Recommendations",
           image: "",
           caption: "",
           body: [
-            "The campaign showed strong, growing participation, an Android-heavy mobile audience, and clear weekday engagement peaks — with GitHub as the community’s tool of choice.",
-            "*Content strategy*: lean into GitHub with resources and tutorials the community already gravitates toward.",
-            "*Mobile first*: optimise everything for Android, where most engagement happens.",
-            "*Weekday focus*: schedule key activity around midweek, especially Wednesdays.",
-            "*Hashtag discipline*: keep #NG30DAYSOFLEARNING and #30DAYSOFLEARNING front and centre to sustain reach.",
+            "Protect the Champions with loyalty perks and premium wine/meat bundles.",
+            "Reactivate At-Risk and Hibernating customers before spending more on acquisition.",
+            "Reverse-engineer the final campaign — document its offer, timing and targeting, and retire the Campaign 2 approach.",
+            "Lead with wine and meat in promotions, and cross-sell minor categories to existing high spenders.",
+            "Fix web conversion — work out why frequent web visitors aren't buying.",
           ],
         },
       ],
@@ -302,6 +322,93 @@ work_intro: "The through-line: I don’t hand off between “analyst” and “e
             "*128 non-moving products*: identified and flagged for clearance or a hard look at relevance.",
             "*$1.3 million at risk*: the projected revenue loss over the next 60 days if nothing changes.",
             "*Recommendations*: tighter demand forecasting, regular inventory audits, right-sized reorder points and safety stock, discontinuing chronic under-performers, and doubling down on the ~12 products already driving 42% of revenue.",
+          ],
+        },
+      ],
+    },
+
+    {
+      slug: "twitter-analytics",
+      title: "Twitter Analytics — #30DaysOfLearning",
+      tag: "Power BI",
+      img: "https://github.com/Gbolahant/Twitter-Analytics-of-30daysofLearning/raw/main/Homepage.png",
+      blurb: "A Power BI report on the #30DaysOfLearning campaign — 674 tweets from 204 people, turned into a three-page engagement story.",
+      summary: "A three-page Power BI report on the #30DaysOfLearning Twitter campaign — engagement, reach and audience.",
+      embed: "https://app.powerbi.com/view?r=eyJrIjoiOWIwMWZiOGItYjBlNy00YmNkLWI4NjItMDA4ZTQ3Y2IzZTFlIiwidCI6ImQ2YjZlODcwLTkwNTgtNDgzOS1hOTJiLTNiNzRhMGI1ODliMSJ9&pageName=ReportSection",
+      links: [
+        { label: "Open full report", url: "https://app.powerbi.com/view?r=eyJrIjoiOWIwMWZiOGItYjBlNy00YmNkLWI4NjItMDA4ZTQ3Y2IzZTFlIiwidCI6ImQ2YjZlODcwLTkwNTgtNDgzOS1hOTJiLTNiNzRhMGI1ODliMSJ9&pageName=ReportSection" },
+        { label: "Code & data on GitHub", url: "https://github.com/Gbolahant/Twitter-Analytics-of-30daysofLearning" },
+      ],
+      sections: [
+        {
+          heading: "Introduction",
+          image: "",
+          caption: "",
+          body: [
+            "The #30DaysOfLearning campaign encourages people to learn in public and share their progress on Twitter. This report uses Power BI to measure how the hashtag actually performed — its engagement, its reach, and who drove the conversation.",
+          ],
+        },
+        {
+          heading: "Problem statement",
+          image: "",
+          caption: "",
+          body: [
+            "The campaign generated plenty of activity, but nobody had measured it. Without analysis it was hard to know how many people took part, how far the hashtag travelled, or which content and days drove engagement — exactly the insight needed to plan the next cohort.",
+          ],
+        },
+        {
+          heading: "Skills demonstrated",
+          image: "",
+          caption: "",
+          body: [
+            "Data collection, cleaning and preparation, Power BI modelling and visualisation, insight generation, and turning findings into clear recommendations.",
+          ],
+        },
+        {
+          heading: "Data sourcing & transformation",
+          image: "https://github.com/Gbolahant/Twitter-Analytics-of-30daysofLearning/raw/main/Transformations.png",
+          caption: "Power Query transformations",
+          body: [
+            "Tweets were scraped from Twitter with Python and saved to a CSV file.",
+            "In Power Query I derived a clean date, the day name, and a short day abbreviation (Mon, Tue…) from the raw timestamp — enough to analyse daily patterns without needing a full data model.",
+          ],
+        },
+        {
+          heading: "Summary page",
+          image: "https://github.com/Gbolahant/Twitter-Analytics-of-30daysofLearning/raw/main/SummaryPage.png",
+          caption: "Report page 1 — Summary",
+          body: [
+            "*Reach*: 674 tweets from 204 different people in the first two months — active participation for a community campaign.",
+            "*Momentum*: tweet volume rose sharply from May into June as the campaign gained traction.",
+            "*Audience*: 61% of participants tweeted from Android and only 9% from iPhone.",
+            "*Timing*: Wednesdays saw the highest engagement; weekends the lowest.",
+          ],
+        },
+        {
+          heading: "Content page",
+          image: "https://github.com/Gbolahant/Twitter-Analytics-of-30daysofLearning/raw/main/Content.png",
+          caption: "Report page 2 — Content",
+          body: [
+            "*Tools*: GitHub was the most-mentioned tool in the conversation; Python the least — a strong lean toward GitHub as the community’s documentation tool.",
+            "*Top voices*: the facilitator @TheOyinbooke dominated the most-liked tweets and the word cloud, while @its_royalgold’s tweet drew the single highest number of likes.",
+          ],
+        },
+        {
+          heading: "",
+          image: "https://github.com/Gbolahant/Twitter-Analytics-of-30daysofLearning/raw/main/MostLiked.png",
+          caption: "Top 15 most-liked tweets",
+          body: [],
+        },
+        {
+          heading: "Conclusion & recommendations",
+          image: "",
+          caption: "",
+          body: [
+            "The campaign showed strong, growing participation, an Android-heavy mobile audience, and clear weekday engagement peaks — with GitHub as the community’s tool of choice.",
+            "*Content strategy*: lean into GitHub with resources and tutorials the community already gravitates toward.",
+            "*Mobile first*: optimise everything for Android, where most engagement happens.",
+            "*Weekday focus*: schedule key activity around midweek, especially Wednesdays.",
+            "*Hashtag discipline*: keep #NG30DAYSOFLEARNING and #30DAYSOFLEARNING front and centre to sustain reach.",
           ],
         },
       ],
