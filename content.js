@@ -58,7 +58,7 @@ window.SITE = {
       { label: "Focus",      value: "Loan performance, credit policy & experimentation" },
       { label: "Background",  value: "Consumer lending & fintech, Nigeria" },
       { label: "Also",        value: "Teaching data skills · Esport" },
-      { label: "Learning",    value: "Data Engineering" },
+      { label: "Learning",    value: "Data Science" },
     ],
   },
 
