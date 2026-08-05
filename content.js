@@ -46,6 +46,10 @@ window.SITE = {
   twitter:  "https://twitter.com/gbolahant1",
   credly:   "https://www.credly.com/users/gbolahan-towobola",
 
+  // The CV/résumé file the "Download CV" button links to. Upload a new PDF
+  // (Add file → Upload files) and update this filename to swap it out.
+  resume: "Gbolahan-Towobola-Resume.pdf",
+
 
   /* ---------- ABOUT ---------- */
 

@@ -65,6 +65,18 @@ project.html?p=YOUR-SLUG
 Fill in that project's `summary`, `body` (the paragraphs), `gallery` (screenshots)
 and `links` (buttons) to flesh out its page.
 
+### Update your CV / résumé
+The "Download CV" button on the home page links to whatever file `resume:`
+points at in `content.js` (currently `Gbolahan-Towobola-Resume.pdf`). To
+swap in a new version:
+1. Click **Add file → Upload files** and upload your new PDF to the root of
+   this repository.
+2. In `content.js`, update `resume:` to the new filename.
+3. (Optional) delete the old file so it doesn't linger in the repo.
+
+A PDF is recommended over `.docx` — it looks the same for everyone who opens
+it and can't be accidentally edited.
+
 ### Add screenshots
 1. Click **Add file → Upload files** in this repository.
 2. Upload your image into a folder named `images` (type `images/` before the
