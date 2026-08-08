@@ -25,10 +25,10 @@ window.SITE = {
 
   name_line1: "Gbolahan",
   name_line2: "Towobola",
-  eyebrow: "Credit & Business Intelligence",
-  thesis: "I build the analytics behind *lending decisions* — cohort performance, credit-policy testing, and the *Power BI* reporting that puts risk and growth in the same view.",
-  subtext: "{years}+ years across Nigerian consumer lending and fintech, turning raw loan data into decisions on approval, limits and collections.",
-  stat1: "{years}+ yrs credit & BI",
+  eyebrow: "Credit Portfolio & Risk Management",
+  thesis: "I own the credit policy, pricing and risk decisions behind a digital lending portfolio, and drove it to *P&L break-even* within two years without compromising credit quality.",
+  subtext: "{years}+ years across Nigerian consumer lending and fintech, owning the portfolio calls that decide who gets approved, on what terms, and what happens when they don't pay.",
+  stat1: "{years}+ yrs credit portfolio & risk",
 
   // The year you started working. The site counts the years from here
   // automatically, so the number above never goes out of date.
@@ -55,10 +55,10 @@ window.SITE = {
 
   about: {
     eyebrow: "The short version",
-    lead: "Most of my work lives at the seam between *credit risk*, *data analytics* and *data engineering*.",
-    body: "I write the SQL that shapes loan-performance data, model how cohorts repay across their life, test credit-policy changes before they ship, and build the Power BI reporting leadership actually uses to make calls. I care about analytics that ends in a decision — not a slide that gets admired and forgotten.",
+    lead: "I own portfolio performance for a digital consumer-lending book: the credit policy, pricing and risk calls that decide whether it grows profitably or not.",
+    body: "I set eligibility, pricing, exposure and risk-treatment policy by segment, run the experiments that prove a change works before it ships, and I'm accountable when the portfolio's numbers move. The SQL, the models and the Power BI reporting are how I do that, not the point of the job.",
     aside: [
-      { label: "Currently",  value: "Credit & BI Portfolio Manager" },
+      { label: "Currently",  value: "Credit Portfolio Manager" },
       { label: "Focus",      value: "Loan performance, credit policy & experimentation" },
       { label: "Background",  value: "Consumer lending & fintech, Nigeria" },
       { label: "Also",        value: "Teaching data skills · Esport" },
@@ -70,14 +70,15 @@ window.SITE = {
   /* ---------- "WHAT I DO" SECTION ---------- */
 
   work_eyebrow: "What I do",
-  work_heading: "Four things I get called in for.",
-work_intro: "The through-line: I don’t hand off between “analyst” and “engineer.” I build the pipeline, the model and the report — so the answer arrives whole.",
+  work_heading: "Five things I get called in for.",
+work_intro: "The through-line: I own the decision, not just the analysis behind it. The pipeline, the model and the report all come from the same place the call gets made.",
 
   capabilities: [
-    { title: "Loan portfolio & cohort analytics", body: "Vintage curves that track collection rate, first-payment default, approval rate and average ticket size across new and renewal cohorts — and across the loan sequence, so you can see exactly where a book earns or leaks." },
-    { title: "Credit policy & A/B testing",       body: "Designing and reading experiments on limit, score-band and affordability rules — with sample-ratio checks, covariate balance and significance testing, so a policy change is proven before it goes live, not after." },
-    { title: "Business intelligence & MIS",       body: "Power BI from the semantic model up — star-schema data models, well-behaved DAX, and reports leadership and risk committees actually run on. Built for a single source of truth and self-service." },
-    { title: "Data pipelines & SQL",              body: "Production SQL across a warehouse (Redshift-style): restructured, documented pipelines that feed both the reporting layer and the experimentation layer from one clean, trusted source." },
+    { title: "Portfolio ownership & P&L", body: "End-to-end ownership of portfolio performance: approval, exposure, revenue and risk-adjusted economics, tracked through vintage curves and cohort analysis, and driven from a standing start to *P&L break-even* within two years without compromising credit quality." },
+    { title: "Credit policy design",      body: "Eligibility, pricing, exposure limits and DTI/affordability treatment, set by risk band so stronger-risk customers earn better terms: the policy layer behind a 15% lift in approvals, a 20% drop in impairment, and a 58% improvement in early default." },
+    { title: "Credit policy testing & experimentation", body: "Designing and reading experiments on limit, score-band and affordability rules, with sample-ratio checks, covariate balance and significance testing, so a policy change is proven before it goes live, not after." },
+    { title: "Fraud & risk detection",     body: "Investigative analysis that catches what standard metrics miss, including an email-similarity model that flagged a fraud ring hiding in plain sight, later adopted and extended into production by the Data Science team." },
+    { title: "Business intelligence, SQL & data pipelines", body: "Power BI from the semantic model up: star-schema data models, well-behaved DAX, and reports leadership and risk committees actually run on. Underneath it, production SQL pipelines across a warehouse (Redshift-style) feed both the reporting and experimentation layers from one clean, trusted source." },
   ],
 
 
@@ -520,7 +521,7 @@ work_intro: "The through-line: I don’t hand off between “analyst” and “e
 
   projects_eyebrow: "Selected projects",
   projects_heading: "A few builds.",
-  projects_intro: "Work spanning Power BI, Python and Excel. The credit-portfolio work above is under NDA — happy to walk through it on a call.",
+  projects_intro: "Work spanning Power BI, Python and Excel, and proof of the same toolkit and thinking behind the credit-portfolio numbers above, on data I can share in full.",
 
 
   /* ---------- CERTIFICATIONS ---------- */
