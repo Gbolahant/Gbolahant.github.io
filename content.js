@@ -517,6 +517,88 @@ work_intro: "The through-line: I own the decision, not just the analysis behind 
       ],
     },
 
+    {
+      slug: "stock-market-analytics",
+      title: "Stock Market Analytics",
+      tag: "Python",
+      // TODO: no chart images exist in the source notebook yet (the plotly
+      // chart renders as an interactive widget, not a saved image). Add a
+      // screenshot to images/stock-market-analytics/ and point img at it.
+      img: "",
+      blurb: "Global stock market data pulled live in Python — S&P 500 additions, cross-country index performance, historical corrections, and earnings-surprise reactions.",
+      summary: "Four real questions about stock markets, answered with yfinance, pandas and web-scraped data.",
+      embed: "",
+      links: [
+        { label: "Notebook on GitHub", url: "https://github.com/Gbolahant/Stock-Market-Analytics-Zoomcamp/blob/main/Module1_stockinvestment.ipynb" },
+      ],
+      sections: [
+        {
+          heading: "Introduction",
+          image: "",
+          caption: "",
+          body: [
+            "Module 1 of DataTalksClub's Stock Market Analytics Zoomcamp: pulling live index and stock data with yfinance and pandas, then using it to answer real questions about markets rather than toy examples.",
+          ],
+        },
+        {
+          heading: "Skills demonstrated",
+          image: "",
+          caption: "",
+          body: [
+            "Financial data retrieval with yfinance and pandas_datareader, web scraping with BeautifulSoup, interactive visualisation with Plotly, time-series transformations, and percentile and correlation analysis.",
+          ],
+        },
+        {
+          heading: "Data sourcing",
+          image: "",
+          caption: "",
+          body: [
+            "Index and stock prices come from Yahoo Finance via yfinance. The current S&P 500 constituent list is scraped directly from Wikipedia, with a browser-style request header to get past the 403 a plain request returns.",
+          ],
+        },
+        {
+          heading: "S&P 500 additions by year",
+          image: "",
+          caption: "",
+          body: [
+            "Question: of the years since 2020, which added the most new companies to the S&P 500? *2025 led with 18 additions*, just ahead of 2024 (16), and 2023 and 2022 (15 each) — the index has kept refreshing at a fairly steady clip.",
+          ],
+        },
+        {
+          heading: "Global index performance",
+          image: "",
+          caption: "",
+          body: [
+            "Question: of 10 major global indices, how many beat the S&P 500's year-to-date return (1 Jan to 21 Aug 2026)? *Only two*: Canada's TSX Composite, ahead by 2.96 percentage points, and Japan's Nikkei 225, ahead by a wide 15.47 points. The other eight, including China, the UK and Germany, all trailed the US.",
+          ],
+        },
+        {
+          heading: "S&P 500 market corrections",
+          image: "",
+          caption: "",
+          body: [
+            "Question: what does a typical S&P 500 correction look like? Defining a correction as any drop of at least 5% from a prior all-time high and scanning closing prices back to 1950 turns up *74 corrections*, with a *median drawdown of 7.99%* and a median trough reached in about 40 days. The worst three: the 2007-2009 financial crisis (-56.8%), the dot-com crash (-49.1%), and the 1973-74 oil crisis (-48.2%).",
+          ],
+        },
+        {
+          heading: "Amazon earnings-surprise reaction",
+          image: "",
+          caption: "",
+          body: [
+            "Question: how does AMZN's stock move in the two days after a positive earnings surprise? Merging its earnings-surprise history with daily prices, the *median 2-day return is +0.35%* following a beat, and the size of the surprise correlates with the size of the move (*r ≈ 0.34*) — bigger beats tend to mean bigger, if noisy, pops.",
+          ],
+        },
+        {
+          heading: "Conclusion",
+          image: "",
+          caption: "",
+          body: [
+            "Four independent questions, one consistent approach: pull the real data, define the metric precisely (what counts as a correction, what counts as a surprise), and let the numbers answer the question instead of a hunch.",
+          ],
+        },
+      ],
+    },
+
   ],
 
   projects_eyebrow: "Selected projects",
