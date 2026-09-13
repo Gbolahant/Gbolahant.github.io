@@ -521,10 +521,7 @@ work_intro: "The through-line: I own the decision, not just the analysis behind 
       slug: "stock-market-analytics",
       title: "Stock Market Analytics",
       tag: "Python",
-      // TODO: no chart images exist in the source notebook yet (the plotly
-      // chart renders as an interactive widget, not a saved image). Add a
-      // screenshot to images/stock-market-analytics/ and point img at it.
-      img: "",
+      img: "images/stock-market-analytics/sp500-additions-by-year.png",
       blurb: "Global stock market data pulled live in Python — S&P 500 additions, cross-country index performance, historical corrections, and earnings-surprise reactions.",
       summary: "Four real questions about stock markets, answered with yfinance, pandas and web-scraped data.",
       embed: "",
@@ -558,24 +555,24 @@ work_intro: "The through-line: I own the decision, not just the analysis behind 
         },
         {
           heading: "S&P 500 additions by year",
-          image: "",
-          caption: "",
+          image: "images/stock-market-analytics/sp500-additions-by-year.png",
+          caption: "S&P 500 additions by year (2022-2026)",
           body: [
             "Question: of the years since 2020, which added the most new companies to the S&P 500? *2025 led with 18 additions*, just ahead of 2024 (16), and 2023 and 2022 (15 each) — the index has kept refreshing at a fairly steady clip.",
           ],
         },
         {
           heading: "Global index performance",
-          image: "",
-          caption: "",
+          image: "images/stock-market-analytics/global-index-ytd.png",
+          caption: "The 2 indices ahead of the S&P 500, YTD 2026",
           body: [
             "Question: of 10 major global indices, how many beat the S&P 500's year-to-date return (1 Jan to 21 Aug 2026)? *Only two*: Canada's TSX Composite, ahead by 2.96 percentage points, and Japan's Nikkei 225, ahead by a wide 15.47 points. The other eight, including China, the UK and Germany, all trailed the US.",
           ],
         },
         {
           heading: "S&P 500 market corrections",
-          image: "",
-          caption: "",
+          image: "images/stock-market-analytics/top10-corrections.png",
+          caption: "The 10 worst S&P 500 corrections since 1950",
           body: [
             "Question: what does a typical S&P 500 correction look like? Defining a correction as any drop of at least 5% from a prior all-time high and scanning closing prices back to 1950 turns up *74 corrections*, with a *median drawdown of 7.99%* and a median trough reached in about 40 days. The worst three: the 2007-2009 financial crisis (-56.8%), the dot-com crash (-49.1%), and the 1973-74 oil crisis (-48.2%).",
           ],
