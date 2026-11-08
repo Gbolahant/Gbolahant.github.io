@@ -87,13 +87,15 @@ it and can't be accidentally edited.
    ```
    Leave `img: ""` to show a plain coloured tile instead.
 
-### Finish the Sales Analysis and COVID-19 Dashboard pages
-These two projects in `content.js` are wired up to point at real screenshots
-— save them into `images/sales-analysis/` and `images/covid-19-dashboard/`
-(see "Add screenshots" above for the exact filenames each project expects).
-Every `"TODO: ..."` line inside each project's `sections` is placeholder
-text — open `content.js`, search for `TODO`, and replace each one with the
-real write-up.
+### Sales Analysis and COVID-19 Dashboard (hidden for now)
+These two projects are not ready, so they sit in the `hidden_projects:` list
+in `content.js` and do not appear on the site. To bring one back:
+1. Save its screenshots into `images/sales-analysis/` or
+   `images/covid-19-dashboard/` (the filenames each project expects are in its
+   block in `content.js`).
+2. Replace every `"TODO: ..."` line in that block with the real write-up.
+3. Cut the whole `{ ... }` block out of `hidden_projects:` and paste it into
+   `projects: [ ... ]`, then add a `<url>` line for it to `sitemap.xml`.
 
 ### Analytics
 The site has a free, cookie-free visit counter from
