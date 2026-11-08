@@ -26,8 +26,8 @@ window.SITE = {
   name_line1: "Gbolahan",
   name_line2: "Towobola",
   eyebrow: "Credit Portfolio & Risk Management",
-  thesis: "I own the credit policy, pricing and risk decisions behind a digital lending portfolio, and drove it to *P&L break-even* within two years without compromising credit quality.",
-  subtext: "{years}+ years across Nigerian consumer lending and fintech, owning the portfolio calls that decide who gets approved, on what terms, and what happens when they don't pay.",
+  thesis: "I own the credit policy, pricing and risk decisions on a digital lending portfolio. Redesigning eligibility and segmentation took *approvals up 15%* while *impairment fell 20%*.",
+  subtext: "{years}+ years in Nigerian consumer lending and fintech, setting the policy that decides who gets approved, on what terms, and what happens when they don't pay.",
   stat1: "{years}+ yrs credit portfolio & risk",
 
   // The year you started working. The site counts the years from here
@@ -55,8 +55,8 @@ window.SITE = {
 
   about: {
     eyebrow: "The short version",
-    lead: "I own portfolio performance for a digital consumer-lending book: the credit policy, pricing and risk calls that decide whether it grows profitably or not.",
-    body: "I set eligibility, pricing, exposure and risk-treatment policy by segment, run the experiments that prove a change works before it ships, and I'm accountable when the portfolio's numbers move. The SQL, the models and the Power BI reporting are how I do that, not the point of the job.",
+    lead: "I own portfolio performance for a digital consumer-lending book: the credit policy, pricing and risk calls that decide whether it grows profitably.",
+    body: "I set eligibility, pricing, exposure and risk-treatment policy by segment, and I test changes with experiments before they reach the whole book. When the portfolio's numbers move, I'm the one who has to explain why. The SQL pipelines and Power BI reporting that senior management and the Risk Committee use are ones I built, so every number traces back to source.",
     aside: [
       { label: "Currently",  value: "Credit Portfolio Manager" },
       { label: "Focus",      value: "Loan performance, credit policy & experimentation" },
@@ -71,14 +71,14 @@ window.SITE = {
 
   work_eyebrow: "What I do",
   work_heading: "Five things I get called in for.",
-work_intro: "The through-line: I own the decision, not just the analysis behind it. The pipeline, the model and the report all come from the same place the call gets made.",
+work_intro: "I make the portfolio decision and build the evidence for it myself: the pipeline, the model and the report.",
 
   capabilities: [
-    { title: "Portfolio ownership & P&L", body: "End-to-end ownership of portfolio performance: approval, exposure, revenue and risk-adjusted economics, tracked through vintage curves and cohort analysis, and driven from a standing start to *P&L break-even* within two years without compromising credit quality." },
-    { title: "Credit policy design",      body: "Eligibility, pricing, exposure limits and DTI/affordability treatment, set by risk band so stronger-risk customers earn better terms: the policy layer behind a 15% lift in approvals, a 20% drop in impairment, and a 58% improvement in early default." },
-    { title: "Credit policy testing & experimentation", body: "Designing and reading experiments on limit, score-band and affordability rules, with sample-ratio checks, covariate balance and significance testing, so a policy change is proven before it goes live, not after." },
-    { title: "Fraud & risk detection",     body: "Investigative analysis that catches what standard metrics miss, including an email-similarity model that flagged a fraud ring hiding in plain sight, later adopted and extended into production by the Data Science team." },
-    { title: "Business intelligence, SQL & data pipelines", body: "Power BI from the semantic model up: star-schema data models, well-behaved DAX, and reports leadership and risk committees actually run on. Underneath it, production SQL pipelines across a warehouse (Redshift-style) feed both the reporting and experimentation layers from one clean, trusted source." },
+    { title: "Portfolio ownership", body: "I own performance and risk monitoring across approval, disbursal, exposure, revenue and risk-adjusted Gross Profit, with ECL, FPD, roll rates, PAR and NPL tracked through segmentation and cohort analysis." },
+    { title: "Credit policy design",      body: "Eligibility, pricing, exposure limits and DTI/affordability treatment, set by risk band so stronger-risk customers get better terms. Redesigning eligibility and segmentation took approvals up 15%, impairment down 20% and FPD30 improved by 58%." },
+    { title: "Credit policy testing & experimentation", body: "A/B tests on limit, score-band and affordability rules, with sample-ratio checks, covariate balance and significance testing, so a policy change is proven before it goes live." },
+    { title: "Fraud & risk detection",     body: "I found a fraud pattern in loan applications that no one had flagged and built an email-similarity model to catch related applications. The Data Science team later adopted it and developed it for production." },
+    { title: "Business intelligence, SQL & data pipelines", body: "Power BI reporting on star-schema models with DAX, fed by production SQL pipelines in Redshift. Senior management and the Risk Committee use it, and every number traces back to source." },
   ],
 
 
@@ -86,8 +86,8 @@ work_intro: "The through-line: I own the decision, not just the analysis behind 
 
   bi: {
     eyebrow: "Business intelligence",
-    heading: "Owned end to end — source to decision.",
-    lead: "Most analysts own one slice of the reporting stack. I build all of it: the *SQL* that shapes the data, the *semantic model and DAX* behind it, and the *Power BI* reports on top — so every number on the executive dashboard traces cleanly back to source, and there’s one version of the truth.",
+    heading: "Owned end to end, from source to decision.",
+    lead: "Most analysts own one slice of the reporting stack. I build all of it: the *SQL* that shapes the data, the *semantic model and DAX* behind it, and the *Power BI* reports on top, so every number on the executive dashboard traces back to source and there’s one version of the truth.",
     steps: [
       /*  { kicker: "Ingest", title: "Source systems",       sub: "loans · payments · scores" }, */
       { kicker: "Model",  title: "SQL & warehouse",      sub: "cleaned · tested · documented" },
@@ -136,8 +136,8 @@ work_intro: "The through-line: I own the decision, not just the analysis behind 
       title: "Marketing Analysis",
       tag: "Python",
       img: "https://raw.githubusercontent.com/Gbolahant/Marketing-Analysis/main/images/customer_demographics.png",
-      blurb: "A retail marketing dataset turned into a customer story in pandas — who the best customers are, what they buy, and which campaigns actually earned their budget back.",
-      summary: "Who are the best customers, what do they buy, and which campaigns work — answered in pandas.",
+      blurb: "A retail marketing dataset in pandas: who the best customers are, what they buy and which campaigns paid back.",
+      summary: "Who the best customers are, what they buy and which campaigns work, answered in pandas.",
       embed: "",
       links: [
         { label: "Notebook & data on GitHub", url: "https://github.com/Gbolahant/Marketing-Analysis" },
@@ -243,8 +243,8 @@ work_intro: "The through-line: I own the decision, not just the analysis behind 
       title: "Inventory Management Analysis",
       tag: "Power BI",
       img: "https://raw.githubusercontent.com/Gbolahant/Inventory-Management-Analysis/main/Overvie.png",
-      blurb: "A Power BI inventory optimization report for a retailer battling stockouts and overstock — turnover, ABC/XYZ analysis and demand forecasting in one model.",
-      summary: "Turning stockouts and overstock into a turnover, ABC/XYZ and forecasting model — in Power BI.",
+      blurb: "A Power BI inventory report for a retailer with stockouts and overstock: turnover, ABC/XYZ analysis and demand forecasting in one model.",
+      summary: "Stockouts and overstock, turned into a turnover, ABC/XYZ and forecasting model in Power BI.",
       embed: "https://app.powerbi.com/view?r=eyJrIjoiM2Q4ZTVkMmMtMmYwZi00YzQ2LWFjNDMtNDYwY2YyMzkwNDY2IiwidCI6ImQ2YjZlODcwLTkwNTgtNDgzOS1hOTJiLTNiNzRhMGI1ODliMSJ9",
       links: [
         { label: "Open full report", url: "https://app.powerbi.com/view?r=eyJrIjoiM2Q4ZTVkMmMtMmYwZi00YzQ2LWFjNDMtNDYwY2YyMzkwNDY2IiwidCI6ImQ2YjZlODcwLTkwNTgtNDgzOS1hOTJiLTNiNzRhMGI1ODliMSJ9" },
@@ -334,11 +334,11 @@ work_intro: "The through-line: I own the decision, not just the analysis behind 
 
     {
       slug: "twitter-analytics",
-      title: "Twitter Analytics — #30DaysOfLearning",
+      title: "Twitter Analytics: #30DaysOfLearning",
       tag: "Power BI",
       img: "https://github.com/Gbolahant/Twitter-Analytics-of-30daysofLearning/raw/main/Homepage.png",
-      blurb: "A Power BI report on the #30DaysOfLearning campaign — 674 tweets from 204 people, turned into a three-page engagement story.",
-      summary: "A three-page Power BI report on the #30DaysOfLearning Twitter campaign — engagement, reach and audience.",
+      blurb: "A Power BI report on the #30DaysOfLearning campaign: 674 tweets from 204 people, in three pages.",
+      summary: "A three-page Power BI report on the #30DaysOfLearning campaign: engagement, reach and audience.",
       embed: "https://app.powerbi.com/view?r=eyJrIjoiOWIwMWZiOGItYjBlNy00YmNkLWI4NjItMDA4ZTQ3Y2IzZTFlIiwidCI6ImQ2YjZlODcwLTkwNTgtNDgzOS1hOTJiLTNiNzRhMGI1ODliMSJ9&pageName=ReportSection",
       links: [
         { label: "Open full report", url: "https://app.powerbi.com/view?r=eyJrIjoiOWIwMWZiOGItYjBlNy00YmNkLWI4NjItMDA4ZTQ3Y2IzZTFlIiwidCI6ImQ2YjZlODcwLTkwNTgtNDgzOS1hOTJiLTNiNzRhMGI1ODliMSJ9&pageName=ReportSection" },
@@ -425,7 +425,7 @@ work_intro: "The through-line: I own the decision, not just the analysis behind 
       tag: "Python",
       // Screenshots saved into images/sales-analysis/ — see README "Add screenshots".
       img: "images/sales-analysis/sales-trend-by-year.png",
-      blurb: "End-to-end analysis in pandas — cleaning, aggregation and trend breakdowns turning a raw transaction file into a readable revenue story.",
+      blurb: "End-to-end analysis in pandas: cleaning, aggregation and trend breakdowns on a raw transaction file.",
       summary: "From a raw transaction file to a revenue story, in pandas.",
       embed: "",
       links: [],
@@ -489,8 +489,8 @@ work_intro: "The through-line: I own the decision, not just the analysis behind 
       tag: "Excel",
       // Screenshot saved into images/covid-19-dashboard/ — see README "Add screenshots".
       img: "images/covid-19-dashboard/dashboard-overview.png",
-      blurb: "A self-updating Excel dashboard with dynamic charts and KPIs — proof that a spreadsheet can still be a proper reporting tool when it’s built well.",
-      summary: "A spreadsheet that behaves like a real reporting tool.",
+      blurb: "A self-updating Excel dashboard with dynamic charts and KPIs, built well enough to work as a reporting tool.",
+      summary: "A spreadsheet that works as a reporting tool.",
       embed: "",
       links: [],
       sections: [
@@ -522,8 +522,8 @@ work_intro: "The through-line: I own the decision, not just the analysis behind 
       title: "Stock Market Analytics",
       tag: "Python",
       img: "images/stock-market-analytics/sp500-additions-by-year.png",
-      blurb: "Global stock market data pulled live in Python — S&P 500 additions, cross-country index performance, historical corrections, and earnings-surprise reactions.",
-      summary: "Four real questions about stock markets, answered with yfinance, pandas and web-scraped data.",
+      blurb: "Live market data pulled in Python: S&P 500 additions, index performance by country, historical corrections and how Amazon moves after earnings.",
+      summary: "Four questions about stock markets, answered with yfinance, pandas and scraped data.",
       embed: "",
       links: [
         { label: "Notebook on GitHub", url: "https://github.com/Gbolahant/Stock-Market-Analytics-Zoomcamp/blob/main/Module1_stockinvestment.ipynb" },
@@ -600,15 +600,15 @@ work_intro: "The through-line: I own the decision, not just the analysis behind 
 
   projects_eyebrow: "Selected projects",
   projects_heading: "A few builds.",
-  projects_intro: "Work spanning Power BI, Python and Excel, and proof of the same toolkit and thinking behind the credit-portfolio numbers above, on data I can share in full.",
+  projects_intro: "Public builds in Power BI, Python and Excel, using the same toolkit as the credit-portfolio work above, on data I can share in full.",
 
 
   /* ---------- CERTIFICATIONS ---------- */
 
   certs: [
-    { issuer: "Microsoft Certified", title: "Power BI Data Analyst Associate", note: "PL-300 — modelling, DAX, and report design for decision-ready analytics." },
-    { issuer: "Microsoft Certified", title: "Azure Data Fundamentals",         note: "DP-900 — core data concepts across relational and analytical workloads." },
-    { issuer: "Microsoft Certified", title: "Power Platform Fundamentals",     note: "PL-900 — Power Apps, Power Automate and Power BI as one toolset." },
+    { issuer: "Microsoft Certified", title: "Power BI Data Analyst Associate", note: "PL-300: modelling, DAX and report design for decision-ready analytics." },
+    { issuer: "Microsoft Certified", title: "Azure Data Fundamentals",         note: "DP-900: core data concepts across relational and analytical workloads." },
+    { issuer: "Microsoft Certified", title: "Power Platform Fundamentals",     note: "PL-900: Power Apps, Power Automate and Power BI as one toolset." },
   ],
 
 
