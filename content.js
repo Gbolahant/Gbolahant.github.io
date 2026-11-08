@@ -148,7 +148,7 @@ work_intro: "I make the portfolio decision and build the evidence for it myself:
           image: "",
           caption: "",
           body: [
-            "Marketa is a specialty retailer selling wine, produce, meat, fish, sweets and gift items across three channels — online, catalogue and physical stores. Over two years the marketing team ran five campaigns plus a final one, and tracked how every customer responded. The brief from the Head of Marketing: “We keep spending on campaigns but we don't really know who our best customers are, what they buy, or which campaigns actually work.”",
+            "Marketa is a specialty retailer selling wine, fresh produce, meat, fish, sweets and gold gift items through three channels: online, a printed catalogue and physical shops. Over two years its marketing team ran five promotional campaigns plus a final one and recorded how each customer responded. The brief from the Head of Marketing: “We keep spending on campaigns but we don't really know who our best customers are, what they buy, or which campaigns actually work.” The data is Maven Analytics' marketing dataset, used here for learning.",
           ],
         },
         {
@@ -156,7 +156,7 @@ work_intro: "I make the portfolio decision and build the evidence for it myself:
           image: "",
           caption: "",
           body: [
-            "Three questions, one dataset: who are the best customers, what do they actually buy, and which of six campaigns earned its budget back. Answering all three meant turning a raw, slightly messy 2,240-row customer export into something a marketing team could act on.",
+            "Three questions from one dataset: who the best customers are, what they buy, and which of the six campaigns paid back. The raw file is a 2,240-row customer export with a few data quality problems, and those had to be fixed before any of it could be trusted.",
           ],
         },
         {
@@ -164,7 +164,7 @@ work_intro: "I make the portfolio decision and build the evidence for it myself:
           image: "",
           caption: "",
           body: [
-            "Data profiling and cleaning, feature engineering, exploratory analysis and RFM (Recency / Frequency / Monetary) customer segmentation — all in Python with pandas, numpy, matplotlib and seaborn, worked through in a Jupyter notebook.",
+            "Data profiling and cleaning, feature engineering, exploratory analysis and RFM (recency, frequency, monetary) segmentation, in Python with pandas, numpy, matplotlib and seaborn, in a Jupyter notebook.",
           ],
         },
         {
@@ -172,7 +172,7 @@ work_intro: "I make the portfolio decision and build the evidence for it myself:
           image: "https://raw.githubusercontent.com/Gbolahant/Marketing-Analysis/main/images/customer_demographics.png",
           caption: "Customer demographics",
           body: [
-            "2,240 customers across 28 columns — demographics, spend by category, purchases by channel, campaign responses. Four issues stood in the way of a clean analysis: 24 missing incomes (imputed from the median for that education level), a handful of impossible birth years (three records over age 90 dropped), messy marital-status labels (*YOLO*, *Absurd*, folded into *Other*), and enrolment dates stored as text. What's left skews middle-aged, mostly *Graduation*-educated, and married or living together.",
+            "The data covers 2,240 customers and 28 columns: demographics, spend by category, purchases by channel and campaign responses. Four problems needed fixing. 24 incomes were missing, so each was filled with the median income for that customer's education level. Three birth years were impossible, so those three records (age over 90) were dropped. Marital status had junk labels (YOLO, Absurd, Alone): Alone became Single and the rest went to Other. Enrolment dates were stored as text, so I converted them to dates. That leaves 2,237 customers, mostly aged 35 to 55, with income concentrated between 30k and 80k, mostly Graduation-educated and married or living together.",
           ],
         },
         {
@@ -180,7 +180,7 @@ work_intro: "I make the portfolio decision and build the evidence for it myself:
           image: "https://raw.githubusercontent.com/Gbolahant/Marketing-Analysis/main/images/spend_by_category.png",
           caption: "Spend by product category",
           body: [
-            "Wine and meat *are* the business — wine alone is roughly *50%* of spend, meat another *28%*. Two categories out of six account for the large majority of revenue.",
+            "Wine is about 50% of spend and meat about 28%, so two of the six categories make up most of the revenue.",
           ],
         },
         {
@@ -188,7 +188,7 @@ work_intro: "I make the portfolio decision and build the evidence for it myself:
           image: "https://raw.githubusercontent.com/Gbolahant/Marketing-Analysis/main/images/spend_drivers.png",
           caption: "What drives spending",
           body: [
-            "*Income* is the strongest single driver of spend, correlating at roughly *0.66* — and customers with children spend markedly less: about *1,105* average with none, versus *407* with children.",
+            "Income is the strongest single driver of spend, with a correlation of about 0.66. Customers with children spend far less: about 1,105 on average with no children, against about 407 with children.",
           ],
         },
         {
@@ -196,7 +196,7 @@ work_intro: "I make the portfolio decision and build the evidence for it myself:
           image: "https://raw.githubusercontent.com/Gbolahant/Marketing-Analysis/main/images/campaign_acceptance.png",
           caption: "Campaign acceptance rate",
           body: [
-            "Six campaigns, wildly different results: the final campaign converted at roughly *14.9%* — more than *10x* the weakest, Campaign 2, at *1.3%* — a strong signal about which offer, timing and targeting is actually worth repeating.",
+            "Acceptance on the final campaign was about 14.9%. The weakest, Campaign 2, was about 1.3%, so the final campaign converted at more than ten times the rate. It is the one to document and repeat.",
           ],
         },
         {
@@ -204,7 +204,7 @@ work_intro: "I make the portfolio decision and build the evidence for it myself:
           image: "https://raw.githubusercontent.com/Gbolahant/Marketing-Analysis/main/images/purchase_channels.png",
           caption: "Purchase channels",
           body: [
-            "The physical store leads on volume, but web and catalogue are both substantial — a genuinely omni-channel customer base, with a notable pocket of frequent web visitors who browse but don't convert.",
+            "The physical store has the most purchases, but web and catalogue are both substantial, so this is a genuinely multi-channel customer base. Some heavy web visitors convert poorly.",
           ],
         },
         {
@@ -212,7 +212,7 @@ work_intro: "I make the portfolio decision and build the evidence for it myself:
           image: "https://raw.githubusercontent.com/Gbolahant/Marketing-Analysis/main/images/customers_per_segment.png",
           caption: "Customers per segment",
           body: [
-            "Every customer is scored on Recency, Frequency and Monetary value (RFM) and sorted into five segments — *Champions*, *Loyal*, *Potential*, *At Risk* and *Hibernating* — each with its own marketing playbook, from loyalty perks for Champions to low-cost reactivation for the dormant tail.",
+            "Each customer is scored 1 to 4 on recency, frequency and monetary value (quartiles) and placed in one of five segments: Champions, Loyal, Potential, At Risk and Hibernating. Each segment gets its own action, from perks and early access for Champions to low-cost reactivation for Hibernating customers.",
           ],
         },
         {
@@ -220,7 +220,7 @@ work_intro: "I make the portfolio decision and build the evidence for it myself:
           image: "https://raw.githubusercontent.com/Gbolahant/Marketing-Analysis/main/images/revenue_by_segment.png",
           caption: "Revenue by segment",
           body: [
-            "A small *Champions* segment — about *537* customers — drives close to *half* of total revenue, while the two weakest segments combined contribute under *3%*. Protecting that top segment matters more than acquiring new customers at the bottom.",
+            "About 537 Champions bring in close to half of total revenue. The two weakest segments together contribute under 3%. That is why the first recommendation is to protect the Champions.",
           ],
         },
         {
@@ -228,11 +228,11 @@ work_intro: "I make the portfolio decision and build the evidence for it myself:
           image: "",
           caption: "",
           body: [
-            "Protect the Champions with loyalty perks and premium wine/meat bundles.",
-            "Reactivate At-Risk and Hibernating customers before spending more on acquisition.",
-            "Reverse-engineer the final campaign — document its offer, timing and targeting, and retire the Campaign 2 approach.",
-            "Lead with wine and meat in promotions, and cross-sell minor categories to existing high spenders.",
-            "Fix web conversion — work out why frequent web visitors aren't buying.",
+            "Protect the Champions with loyalty perks and premium wine and meat bundles.",
+            "Reactivate At Risk and Hibernating customers before spending more on acquisition.",
+            "Document the final campaign's offer, timing and targeting and reuse it. Drop the Campaign 2 approach.",
+            "Lead promotions with wine and meat, and cross-sell the smaller categories to existing high spenders.",
+            "Find out why frequent web visitors aren't buying.",
           ],
         },
       ],
@@ -256,7 +256,7 @@ work_intro: "I make the portfolio decision and build the evidence for it myself:
           image: "",
           caption: "",
           body: [
-            "FitCapacity, a retailer running on the Adventure Works dataset, was losing money on both ends of the shelf — some products sat out of stock while others piled up unsold. This project builds the Power BI model that tells the difference, and what to do about each.",
+            "FitCapacity, a retailer built on the Adventure Works dataset, had stockouts on some products and overstock on others. This project builds the Power BI model that shows which is which and what to do about each.",
           ],
         },
         {
@@ -264,7 +264,7 @@ work_intro: "I make the portfolio decision and build the evidence for it myself:
           image: "",
           caption: "",
           body: [
-            "The brief: identify which products turn over fast and which don't, measure how long stockouts actually last, forecast demand for the products that matter most, and sort the catalogue into high-, average- and low-selling tiers — the everyday questions an inventory team needs answered, not just described.",
+            "FitCapacity needed four things: which products turn over fast or slowly, how long products stay out of stock on average, a demand forecast with stockout predictions for the main products, and a split of the range into high-, average- and low-selling groups.",
           ],
         },
         {
@@ -272,7 +272,7 @@ work_intro: "I make the portfolio decision and build the evidence for it myself:
           image: "",
           caption: "",
           body: [
-            "SQL extraction and modelling from the Adventure Works database, DAX for calculated tables and measures, Power BI report design with Deneb custom visuals, tooltips, bookmarks and page navigation, and translating the numbers into recommendations a business can act on.",
+            "SQL extraction from Adventure Works, DAX for calculated tables and measures, and Power BI report design with Deneb visuals, tooltips, bookmarks and page navigation.",
           ],
         },
         {
@@ -280,41 +280,41 @@ work_intro: "I make the portfolio decision and build the evidence for it myself:
           image: "https://raw.githubusercontent.com/Gbolahant/Inventory-Management-Analysis/main/Model.png",
           caption: "Snowflake schema",
           body: [
-            "Five SQL queries pull inventory, product, sales, purchasing and product-photo data out of Adventure Works into a snowflake model. On top of that sit DAX-built calculated tables — a rolling 365-day daily and weekly demand sheet, a date table — plus two field parameters, *Demand Factor* and *Forecast Days*, that let the Forecast page be adjusted live rather than rebuilt.",
+            "Five SQL queries pull inventory, product, sales, purchasing and product photo data from Adventure Works into a snowflake model. DAX calculated tables sit on top: a daily and a weekly demand sheet covering the last 365 days, and a date table. Two field parameters, Demand Factor (-0.2 to 0.5 in steps of 0.1) and Forecast Days (10 to 100 in steps of 10), let the Forecast page be changed live.",
           ],
         },
         {
           heading: "Overview page",
           image: "https://raw.githubusercontent.com/Gbolahant/Inventory-Management-Analysis/main/Overvie.png",
-          caption: "Report page 1 — Overview",
+          caption: "Report page 1: Overview",
           body: [
-            "*Turnover*: an overall rate of 3.8 — Accessories lead at 15.1, Clothing at 13.5, Bikes at 4.2, Components lag at 2.1.",
-            "*Concentration*: 12 products, all Bikes, drive 42% of annual revenue.",
-            "*Scale*: $73 million in revenue against $14 million of stock on hand.",
+            "Turnover is 3.8 overall: Accessories 15.1, Clothing 13.5, Bikes 4.2, Components 2.1.",
+            "12 products, all Bikes, produce 42% of annual revenue.",
+            "Annual revenue is $73 million, of which Bikes are $60 million, against $14 million of stock on hand.",
           ],
         },
         {
           heading: "Product page",
           image: "https://raw.githubusercontent.com/Gbolahant/Inventory-Management-Analysis/main/Product.png",
-          caption: "Report page 2 — Product",
+          caption: "Report page 2: Product",
           body: [
-            "Top and bottom 5 by turnover and by revenue, side by side, plus an *ABC analysis* (which products earn their shelf space) and an *XYZ analysis* (which ones have demand you can actually predict) — together they show where to spend inventory attention first.",
+            "The top and bottom five products by turnover and by revenue, plus two classifications. ABC groups products by revenue contribution. XYZ groups them by how predictable their demand is. Together they show where inventory attention should go first.",
           ],
         },
         {
           heading: "Forecast page",
           image: "https://raw.githubusercontent.com/Gbolahant/Inventory-Management-Analysis/main/Forecast.png",
-          caption: "Report page 3 — Forecast",
+          caption: "Report page 3: Forecast",
           body: [
-            "Built on the Demand Factor and Forecast Days parameters, this page recalculates safety stock and reorder points live as you move the sliders — turning a static forecast into something a planner can actually stress-test.",
+            "The user sets the number of forecast days and a demand factor. The page then recalculates each product's recommendation, its safety stock and its reorder point.",
           ],
         },
         {
           heading: "Insight page",
           image: "https://raw.githubusercontent.com/Gbolahant/Inventory-Management-Analysis/main/Insights.png",
-          caption: "Report page 4 — Insight",
+          caption: "Report page 4: Insight",
           body: [
-            "The Insight page rolls the analysis up into the findings that matter — seasonality, turnover, non-moving stock, revenue at risk — with two tooltip pages behind it providing the drill-down detail whenever a stakeholder asks “why.”",
+            "It pulls the findings together: seasonality in sales, the low turnover rate, non-moving products and revenue at risk. Two tooltip pages give extra detail when you hover over the main visuals.",
           ],
         },
         {
@@ -322,11 +322,11 @@ work_intro: "I make the portfolio decision and build the evidence for it myself:
           image: "",
           caption: "",
           body: [
-            "*Seasonality*: demand isn't flat — inventory planning needs to move with it, not react to it.",
-            "*Low turnover*: a 3.8 rate points to inventory sitting too long on the shelf.",
-            "*128 non-moving products*: identified and flagged for clearance or a hard look at relevance.",
-            "*$1.3 million at risk*: the projected revenue loss over the next 60 days if nothing changes.",
-            "*Recommendations*: tighter demand forecasting, regular inventory audits, right-sized reorder points and safety stock, discontinuing chronic under-performers, and doubling down on the ~12 products already driving 42% of revenue.",
+            "Seasonality: sales are seasonal, so stock needs planning ahead of peak periods.",
+            "Low turnover: a rate of 3.8 points to slow sales and surplus stock.",
+            "128 non-moving products have been identified, for clearance or a review of whether they belong in the range.",
+            "$1.3 million of revenue is at risk over the next 60 days if inventory isn't managed better.",
+            "Recommendations: better demand forecasting, regular inventory audits, reorder points and safety stock set from sales history, lead times and demand variability, discontinuing products with consistently low turnover, and protecting the roughly 12 products that bring in 42% of revenue.",
           ],
         },
       ],
@@ -350,7 +350,7 @@ work_intro: "I make the portfolio decision and build the evidence for it myself:
           image: "",
           caption: "",
           body: [
-            "The #30DaysOfLearning campaign encourages people to learn in public and share their progress on Twitter. This report uses Power BI to measure how the hashtag actually performed — its engagement, its reach, and who drove the conversation.",
+            "The #30DaysOfLearning campaign asks people to learn in public and share their progress on Twitter. This Power BI report measures how the hashtag performed: engagement, reach and who drove the conversation.",
           ],
         },
         {
@@ -358,7 +358,7 @@ work_intro: "I make the portfolio decision and build the evidence for it myself:
           image: "",
           caption: "",
           body: [
-            "The campaign generated plenty of activity, but nobody had measured it. Without analysis it was hard to know how many people took part, how far the hashtag travelled, or which content and days drove engagement — exactly the insight needed to plan the next cohort.",
+            "The campaign produced plenty of activity but nobody had measured it. There was no count of how many people took part, how far the hashtag travelled, or which content and days drove engagement. That is what you need to plan the next cohort.",
           ],
         },
         {
@@ -366,7 +366,7 @@ work_intro: "I make the portfolio decision and build the evidence for it myself:
           image: "",
           caption: "",
           body: [
-            "Data collection, cleaning and preparation, Power BI modelling and visualisation, insight generation, and turning findings into clear recommendations.",
+            "Data collection, cleaning and preparation, Power BI modelling and visualisation, and turning findings into recommendations.",
           ],
         },
         {
@@ -374,28 +374,28 @@ work_intro: "I make the portfolio decision and build the evidence for it myself:
           image: "https://github.com/Gbolahant/Twitter-Analytics-of-30daysofLearning/raw/main/Transformations.png",
           caption: "Power Query transformations",
           body: [
-            "Tweets were scraped from Twitter with Python and saved to a CSV file.",
-            "In Power Query I derived a clean date, the day name, and a short day abbreviation (Mon, Tue…) from the raw timestamp — enough to analyse daily patterns without needing a full data model.",
+            "I scraped the tweets from Twitter with Python and saved them to a CSV.",
+            "In Power Query I derived a clean date, the day name and a short day abbreviation (Mon, Tue and so on) from the raw timestamp. That was enough to analyse daily patterns without building a full data model.",
           ],
         },
         {
           heading: "Summary page",
           image: "https://github.com/Gbolahant/Twitter-Analytics-of-30daysofLearning/raw/main/SummaryPage.png",
-          caption: "Report page 1 — Summary",
+          caption: "Report page 1: Summary",
           body: [
-            "*Reach*: 674 tweets from 204 different people in the first two months — active participation for a community campaign.",
-            "*Momentum*: tweet volume rose sharply from May into June as the campaign gained traction.",
-            "*Audience*: 61% of participants tweeted from Android and only 9% from iPhone.",
-            "*Timing*: Wednesdays saw the highest engagement; weekends the lowest.",
+            "Reach: 674 tweets from 204 different people in the first two months.",
+            "Momentum: tweet volume rose sharply from May into June as the campaign picked up.",
+            "Audience: 61% of participants tweeted from Android and only 9% from iPhone.",
+            "Timing: Wednesdays had the highest engagement and weekends the lowest.",
           ],
         },
         {
           heading: "Content page",
           image: "https://github.com/Gbolahant/Twitter-Analytics-of-30daysofLearning/raw/main/Content.png",
-          caption: "Report page 2 — Content",
+          caption: "Report page 2: Content",
           body: [
-            "*Tools*: GitHub was the most-mentioned tool in the conversation; Python the least — a strong lean toward GitHub as the community’s documentation tool.",
-            "*Top voices*: the facilitator @TheOyinbooke dominated the most-liked tweets and the word cloud, while @its_royalgold’s tweet drew the single highest number of likes.",
+            "Tools: GitHub was the most mentioned tool and Python the least, so the community leaned heavily on GitHub for documenting its work.",
+            "Top voices: the facilitator @TheOyinbooke dominated the most-liked tweets and the word cloud, and @its_royalgold's tweet had the single highest number of likes.",
           ],
         },
         {
@@ -409,11 +409,11 @@ work_intro: "I make the portfolio decision and build the evidence for it myself:
           image: "",
           caption: "",
           body: [
-            "The campaign showed strong, growing participation, an Android-heavy mobile audience, and clear weekday engagement peaks — with GitHub as the community’s tool of choice.",
-            "*Content strategy*: lean into GitHub with resources and tutorials the community already gravitates toward.",
-            "*Mobile first*: optimise everything for Android, where most engagement happens.",
-            "*Weekday focus*: schedule key activity around midweek, especially Wednesdays.",
-            "*Hashtag discipline*: keep #NG30DAYSOFLEARNING and #30DAYSOFLEARNING front and centre to sustain reach.",
+            "Participation was strong and growing, the audience was mostly on Android, and engagement peaked midweek, with GitHub the tool people used most.",
+            "Content strategy: lean into GitHub with resources and tutorials the community already uses.",
+            "Mobile first: optimise for Android, where most engagement happens.",
+            "Weekday focus: schedule key activity around midweek, especially Wednesdays.",
+            "Hashtag discipline: keep #NG30DAYSOFLEARNING and #30DAYSOFLEARNING prominent to sustain reach.",
           ],
         },
       ],
@@ -436,7 +436,7 @@ work_intro: "I make the portfolio decision and build the evidence for it myself:
           image: "",
           caption: "",
           body: [
-            "Module 1 of DataTalksClub's Stock Market Analytics Zoomcamp: pulling live index and stock data with yfinance and pandas, then using it to answer real questions about markets rather than toy examples.",
+            "Module 1 of DataTalksClub's Stock Market Analytics Zoomcamp: pull live index and stock data with yfinance and pandas, and use it to answer real questions about markets. I started investing on expert tips and wanted to check the numbers myself.",
           ],
         },
         {
@@ -444,7 +444,7 @@ work_intro: "I make the portfolio decision and build the evidence for it myself:
           image: "",
           caption: "",
           body: [
-            "Financial data retrieval with yfinance and pandas_datareader, web scraping with BeautifulSoup, interactive visualisation with Plotly, time-series transformations, and percentile and correlation analysis.",
+            "yfinance and pandas_datareader for market data, BeautifulSoup for scraping, Plotly for charts, time-series transformations, and percentile and correlation analysis.",
           ],
         },
         {
@@ -452,7 +452,7 @@ work_intro: "I make the portfolio decision and build the evidence for it myself:
           image: "",
           caption: "",
           body: [
-            "Index and stock prices come from Yahoo Finance via yfinance. The current S&P 500 constituent list is scraped directly from Wikipedia, with a browser-style request header to get past the 403 a plain request returns.",
+            "Index and stock prices come from Yahoo Finance through yfinance. The current S&P 500 constituent list is scraped from Wikipedia, with a browser-style request header because a plain request returns a 403.",
           ],
         },
         {
@@ -460,7 +460,7 @@ work_intro: "I make the portfolio decision and build the evidence for it myself:
           image: "images/stock-market-analytics/sp500-additions-by-year.png",
           caption: "S&P 500 additions by year (2022-2026)",
           body: [
-            "Question: of the years since 2020, which added the most new companies to the S&P 500? *2025 led with 18 additions*, just ahead of 2024 (16), and 2023 and 2022 (15 each) — the index has kept refreshing at a fairly steady clip.",
+            "Which year since 2020 added the most companies to the S&P 500? 2025, with 18 additions, ahead of 2024 (16) and 2023 and 2022 (15 each). 2026 has 13 so far.",
           ],
         },
         {
@@ -468,7 +468,7 @@ work_intro: "I make the portfolio decision and build the evidence for it myself:
           image: "images/stock-market-analytics/global-index-ytd.png",
           caption: "The 2 indices ahead of the S&P 500, YTD 2026",
           body: [
-            "Question: of 10 major global indices, how many beat the S&P 500's year-to-date return (1 Jan to 21 Aug 2026)? *Only two*: Canada's TSX Composite, ahead by 2.96 percentage points, and Japan's Nikkei 225, ahead by a wide 15.47 points. The other eight, including China, the UK and Germany, all trailed the US.",
+            "How many of the 10 other major indices beat the S&P 500's year-to-date return (1 January to 21 August 2026)? Two. Canada's TSX Composite was 2.96 percentage points ahead and Japan's Nikkei 225 was 15.47 points ahead. The other eight, including China, the UK and Germany, did not beat it.",
           ],
         },
         {
@@ -476,7 +476,7 @@ work_intro: "I make the portfolio decision and build the evidence for it myself:
           image: "images/stock-market-analytics/top10-corrections.png",
           caption: "The 10 worst S&P 500 corrections since 1950",
           body: [
-            "Question: what does a typical S&P 500 correction look like? Defining a correction as any drop of at least 5% from a prior all-time high and scanning closing prices back to 1950 turns up *74 corrections*, with a *median drawdown of 7.99%* and a median trough reached in about 40 days. The worst three: the 2007-2009 financial crisis (-56.8%), the dot-com crash (-49.1%), and the 1973-74 oil crisis (-48.2%).",
+            "I defined a correction as a fall of at least 5% from the most recent all-time high and scanned closing prices back to 1950. That found 74 corrections, with a median drawdown of 7.99% and a median of about 40 days from peak to trough. The three worst were 2007 to 2009 (-56.8%), 2000 to 2002 (-49.1%) and 1973 to 1974 (-48.2%).",
           ],
         },
         {
@@ -484,7 +484,7 @@ work_intro: "I make the portfolio decision and build the evidence for it myself:
           image: "",
           caption: "",
           body: [
-            "Question: how does AMZN's stock move in the two days after a positive earnings surprise? Merging its earnings-surprise history with daily prices, the *median 2-day return is +0.35%* following a beat, and the size of the surprise correlates with the size of the move (*r ≈ 0.34*) — bigger beats tend to mean bigger, if noisy, pops.",
+            "How does AMZN move around a positive earnings surprise? I joined its earnings history to daily prices and measured the return from the close the day before the report to the close the day after. The median 2-day return after a beat was +0.35%, and the size of the surprise has a correlation of about 0.34 with the size of the move. The earnings data only goes back to October 2020, so the sample is small.",
           ],
         },
         {
@@ -492,7 +492,7 @@ work_intro: "I make the portfolio decision and build the evidence for it myself:
           image: "",
           caption: "",
           body: [
-            "Four independent questions, one consistent approach: pull the real data, define the metric precisely (what counts as a correction, what counts as a surprise), and let the numbers answer the question instead of a hunch.",
+            "Each question needed a precise definition before it could be answered: what counts as a correction, what counts as a surprise, and where year to date starts and ends.",
           ],
         },
       ],
